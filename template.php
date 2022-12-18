@@ -27,12 +27,7 @@
             <?php $this->load->view("$folder_themes/partials/header-mobile"); ?>
 
             <div class="container app-content">
-
-                <!-- START CONTENT -->
-                <div class="mt-5">
-                    <div class="">
-                    </div>
-                </div>
+                <?php $this->load->view("$folder_themes/partials/content"); ?>
             </div>
         </div>
         <?php $this->load->view("$folder_themes/partials/footer"); ?>
