@@ -172,6 +172,7 @@
 						$("[data-name=pendaftaran]").html(`<span style="color: black; font-size: 9px;">VERVAL MANDIRI</span><p style="color: black;margin-top: -5px;">${a.data.pendaftaran}</p>`)
 						$("[data-name=ibuhamil]").html(`<span style="color: black; font-size: 9px;">IBU HAMIL</span><p style="color: black;margin-top: -5px;">${a.data.ibuhamil}</p>`)
 						$("[data-name=dusun]").html(`<span style="color: black; font-size: 9px;">JUMLAH DUSUN</span><p style="color: black;margin-top: -5px;">${a.data.dusun}</p>`)
+						$("[data-name=ebook]").html(`<span style="color: black; font-size: 9px;">BUKU TAMU</span><p style="color: black;margin-top: -5px;">${a.data.rekapbukutamu}</p>`)
 					},
 					error: function (a) {
 						$(".box-shalat").html(
