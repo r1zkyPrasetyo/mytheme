@@ -22,7 +22,7 @@
                         </ul>
                         <?php endif; ?>
                     </li>
-                    <?php endforeach; ?>`
+                    <?php endforeach; ?>
                 </ul>
             </nav>
             <!--Nav-->
