@@ -5,13 +5,13 @@
         <div class="d-flex">
             <a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a>
             <a class="header-brand d-flex" href="<?= base_url(); ?>">
-                <img src="assets/images/brand/logo_satker.png" width="50"
+                <img src="<?= gambar_desa($desa['logo']); ?>" width="50"
                     class="header-brand-img mt-2 mr-2 desktop-logo" alt="logo">
-                <img src="assets/images/brand/logo_satker.png" width="50"
+                <img src="<?= gambar_desa($desa['logo']); ?>" width="50"
                     class="header-brand-img mt-2 mr-2  mobile-light" alt="logo">
                 <div class="text-dark">
-                    <h6 class="m-0 p-0 pt-2"><strong>DISDUKCAPIL</strong></h6>
-                    <h5 class="font-weight-bolder m-0 p-0"> LAMPUNG SELATAN</h5>
+                    <h6 class="m-0 p-0 pt-2"><strong>LAYANAN</strong></h6>
+                    <h5 class="font-weight-bolder m-0 p-0"> <?= $this->setting->website_title. ' ' . ucwords($this->setting->sebutan_desa). (($desa['nama_desa']) ? ' ' . $desa['nama_desa'] : ''); ?></h5>
                 </div>
             </a><!-- LOGO -->
             <div class="d-flex order-lg-2 ml-auto header-right-icons">

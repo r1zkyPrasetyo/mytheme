@@ -6,13 +6,13 @@
         <div class="d-flex">
             <a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a>
             <div class="">
-                <a class="header-brand1 d-flex" href="main.html">
-                    <img src="assets/images/brand/logo_satker.png" width="45" class="mr-2 desktop-logo" alt="logo">
-                    <img src="assets/images/brand/logo_satker.png" width="45" class="mr-2 light-logo" alt="logo">
+                <a class="header-brand1 d-flex" href="<?= site_url(); ?>">
+                    <img src="<?= gambar_desa($desa['logo']); ?>" width="45" class="mr-2 desktop-logo" alt="logo">
+                    <img src="<?= gambar_desa($desa['logo']); ?>" width="45" class="mr-2 light-logo" alt="logo">
                     <div class="text-dark">
-                        <h5 class="m-0 p-0 pt-1"><strong>DINAS KEPENDUDUKAN DAN PENCATATAN SIPIL</strong></h5>
-                        <h4 class="font-weight-bolder m-0 p-0">KABUPATEN LAMPUNG SELATAN</h4>
-                        <h5 class="m-0 p-0"><strong>PROVINSI LAMPUNG</strong></h5>
+                        <h5 class="m-0 p-0 pt-1"><strong>LAYANAN <?= $this->setting->website_title. ' ' . ucwords($this->setting->sebutan_desa). (($desa['nama_desa']) ? ' ' . $desa['nama_desa'] : ''); ?></strong></h5>
+                        <h4 class="font-weight-bolder m-0 p-0"><?= ucwords($this->setting->sebutan_kecamatan_singkat." ".$desa['nama_kecamatan'])?> <?= ucwords($this->setting->sebutan_kabupaten_singkat." ".$desa['nama_kabupaten'])?></h4>
+                        <h5 class="m-0 p-0"><strong><?= ucwords("Prov. ".$desa['nama_propinsi'])?></strong></h5>
                     </div>
                 </a><!-- LOGO -->
             </div>

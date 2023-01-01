@@ -22,7 +22,7 @@
 </title>
 
 <link rel="shortcut icon" href="<?= favico_desa() ?>"/>
-<meta property="og:url" content="<?= base_url(); ?>">
+<meta property="og:url" content="<?= site_url(); ?>">
 <meta property="og:title" content="<?= $this->setting->website_title . ' '.  $desa_title; ?>">
 <meta property="og:description" content="<?= $this->setting->website_title . ' '.  $desa_title; ?>">
 <meta property="og:image" content="<?= favico_desa() ?>">
@@ -42,9 +42,10 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/peta.css'); ?>">
 <link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/dataTables.bootstrap.min.css'); ?>">
 <!-- BOOTSTRAP CSS -->
-<link href="<?= base_url('assets/plugins/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" />
+<link href="<?= base_url('assets/mytheme/plugins/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" />
 <style type="text/css">
     .ui-datepicker{z-index:100000!important}#loadingAjax,.MyLoading,.lds-hourglass{z-index:99999;position:fixed;top:0;left:0;bottom:0;right:0;margin:auto}#loadingAjax,.MyLoading{overflow:hidden;cursor:wait;background-color:rgba(255,255,255,.2)}.image_preview,.image_remove{border:none;color:#fff;padding:5px;text-align:center;text-decoration:none;display:inline-block;font-size:12px;cursor:pointer;width:100%}.lds-hourglass{background-color:transparent}.sweet-alert fieldset{border:none;position:relative;display:block}.image_preview{background-color:#d43f8d}.image_preview:hover{background-color:#b11f6a}.image_preview:disabled,.image_remove:disabled{opacity:.6;cursor:not-allowed}.image_remove{background-color:#623aa2}.image_remove:hover{background-color:#4e12b6!important}.sweet-alert button.cancel{background-color:#d43f8d!important;box-shadow:0 0 0 2px rgba(212,63,141,.9)!important}.sweet-alert .sa-input-error{position:absolute;top:23px;right:10px;width:20px;height:20px;opacity:0;-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:.1s;transition:.1s}.sweet-alert .sa-error-container p{padding:0;margin:auto;font-weight:700}.sweet-alert .sa-error-container.show{margin-bottom:20px!important}
+	.table.dataTable thead th{text-align:center;vertical-align:middle;background-color:#d2d6de!important}
 </style>
 <!-- STYLE CSS -->
 <link href="<?= base_url('assets/mytheme/css/style.css'); ?>" rel="stylesheet" />
@@ -53,6 +54,8 @@
 <!--HORIZONTAL CSS-->
 <link href="<?= base_url('assets/mytheme/plugins/horizontal-menu/horizontal-menu.css'); ?>" rel="stylesheet" />
 <!-- CUSTOM SCROLL BAR CSS-->
+<link rel="stylesheet" type="text/css" href="<?= base_url('assets/mytheme/css/custom4.css'); ?>"
+        media="all" />
 <link href="<?= base_url('assets/mytheme/plugins/scroll-bar/jquery.mCustomScrollbar.css'); ?>" rel="stylesheet" />
 <!--- FONT-ICONS CSS -->
 <link href="<?= base_url('assets/mytheme/css/icons.css'); ?>" rel="stylesheet" />
@@ -62,3 +65,80 @@
 <link id="theme" rel="stylesheet" type="text/css" media="all" href="<?= base_url('assets/mytheme/colors/color1.css'); ?>" />
 <!--SWEET ALERT CSS-->
 <link href="<?= base_url('assets/mytheme/plugins/sweet-alert/sweetalert.css'); ?>" rel="stylesheet" />
+<!-- TABS STYLES -->
+<link href="<?= base_url('assets/mytheme/css/tabs.css'); ?>" rel="stylesheet" />
+<!-- DATA TABLE CSS -->
+<link href="<?= base_url('assets/mytheme/plugins/datatable/dataTables.bootstrap4.min.css'); ?>" rel="stylesheet" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ if (window.scrollY == 0) window.scrollTo(0,1); } </script>
+<script language='javascript' src="<?= base_url('assets/front/js/jquery.min.js'); ?>"></script>
+<script language='javascript' src="<?= base_url('assets/front/js/jquery.cycle2.min.js'); ?>"></script>
+<script language='javascript' src="<?= base_url('assets/front/js/jquery.cycle2.carousel.js'); ?>"></script>
+<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/bootstrap.min.js"); ?>"></script>
+<script src="<?= base_url('assets/js/leaflet.js'); ?>"></script>
+<script src="<?= base_url('assets/front/js/layout.js'); ?>"></script>
+<script src="<?= base_url('assets/front/js/jquery.colorbox.js'); ?>"></script>
+<script src="<?= base_url('assets/js/leaflet-providers.js'); ?>"></script>
+<script src="<?= base_url('assets/js/highcharts/highcharts.js'); ?>"></script>
+<script src="<?= base_url('assets/js/highcharts/highcharts-3d.js'); ?>"></script>
+<script src="<?= base_url('assets/js/highcharts/exporting.js'); ?>"></script>
+<script src="<?= base_url('assets/js/highcharts/highcharts-more.js'); ?>"></script>
+<script src="<?= base_url('assets/js/highcharts/sankey.js'); ?>"></script>
+<script src="<?= base_url('assets/js/highcharts/organization.js'); ?>"></script>
+<script src="<?= base_url('assets/js/highcharts/accessibility.js'); ?>"></script>
+<script src="<?= base_url('assets/js/mapbox-gl.js'); ?>"></script>
+<script src="<?= base_url('assets/js/leaflet-mapbox-gl.js'); ?>"></script>
+<script src="<?= base_url('assets/js/peta.js'); ?>"></script>
+<script src="<?= base_url() ?>assets/bootstrap/js/jquery.dataTables.min.js"></script>
+<script src="<?= base_url() ?>assets/bootstrap/js/dataTables.bootstrap.min.js"></script>
+<?php $this->load->view('global/validasi_form', ['web_ui' => true]); ?>
+<script type="text/javascript">
+	var BASE_URL = "<?= base_url(); ?>";
+</script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script type="text/javascript">
+	window.setTimeout("renderDate()",1);
+	days = new Array("Minggu","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu");
+	months = new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
+	function renderDate()
+	{
+		var mydate = new Date();
+		var year = mydate.getYear();
+		if (year < 2000)
+		{
+			if (document.all)
+				year = "19" + year;
+			else
+				year += 1900;
+		}
+		var day = mydate.getDay();
+		var month = mydate.getMonth();
+		var daym = mydate.getDate();
+		if (daym < 10)
+			daym = "0" + daym;
+		var hours = mydate.getHours();
+		var minutes = mydate.getMinutes();
+		var seconds = mydate.getSeconds();
+		if (hours <= 9)
+			hours = "0" + hours;
+		if (minutes <= 9)
+			minutes = "0" + minutes;
+		if (seconds <= 9)
+			seconds = "0" + seconds;
+		$('#jam').html("<B>"+days[day]+", "+daym+" "+months[month]+" "+year+"</B><br>"+hours+" : "+minutes+" : "+seconds);
+		setTimeout("renderDate()",1000)
+	}
+</script>
+<style type="text/css">
+	#jam {
+		text-align:center;
+		color: #ffffff;
+	}
+</style>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.2&appId=147912828718&autoLogAppEvents=1"></script>
+
+<!--[if lt IE 9]>
+<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/html5shiv.min.js"); ?>"></script>
+<script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/respond.min.js"); ?>"></script>
+<![endif]-->
+<?php $this->load->view('head_tags_front') ?>
