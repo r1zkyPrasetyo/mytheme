@@ -3,257 +3,257 @@
 <div class="mt-5">
     <div class="">
         <div class="row">
-    <style type="text/css">
-	.ui-datepicker {
-		/* z-index: 10000; */
+            <style type="text/css">
+                .ui-datepicker {
+                    /* z-index: 10000; */
 
-		z-index: 100000 !important;
-	}
+                    z-index: 100000 !important;
+                }
 
-	/* Absolute Center Spinner */
-	#loadingAjax {
-		position: fixed;
-		z-index: 99999;
-		overflow: hidden;
-		margin: auto;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		cursor: wait;
-		background-color: rgba(255, 255, 255, .2);
-	}
+                /* Absolute Center Spinner */
+                #loadingAjax {
+                    position: fixed;
+                    z-index: 99999;
+                    overflow: hidden;
+                    margin: auto;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    cursor: wait;
+                    background-color: rgba(255, 255, 255, .2);
+                }
 
-	.MyLoading {
-		position: fixed;
-		z-index: 99999;
-		overflow: hidden;
-		margin: auto;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		cursor: wait;
-		background-color: rgba(255, 255, 255, .2);
-	}
+                .MyLoading {
+                    position: fixed;
+                    z-index: 99999;
+                    overflow: hidden;
+                    margin: auto;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    cursor: wait;
+                    background-color: rgba(255, 255, 255, .2);
+                }
 
-	.lds-hourglass {
-		z-index: 99999;
-		position: fixed;
-		/* width: 64px;
+                .lds-hourglass {
+                    z-index: 99999;
+                    position: fixed;
+                    /* width: 64px;
 		height: 64px; */
-		margin: auto;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		background-color: transparent;
-	}
+                    margin: auto;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    background-color: transparent;
+                }
 
-	.sweet-alert fieldset {
-		border: none;
-		position: relative;
-		display: block;
-	}
+                .sweet-alert fieldset {
+                    border: none;
+                    position: relative;
+                    display: block;
+                }
 
-	.image_preview {
-		background-color: #d43f8d;
-		/* Green */
-		border: none;
-		color: white;
-		padding: 5px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 12px;
-		cursor: pointer;
-		width: 100%;
-	}
+                .image_preview {
+                    background-color: #d43f8d;
+                    /* Green */
+                    border: none;
+                    color: white;
+                    padding: 5px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 12px;
+                    cursor: pointer;
+                    width: 100%;
+                }
 
-	.image_preview:hover {
-		background-color: #B11F6A;
-	}
+                .image_preview:hover {
+                    background-color: #B11F6A;
+                }
 
-	.image_preview:disabled {
-		opacity: 0.6;
-		cursor: not-allowed;
-	}
-
-
-	.image_remove {
-		background-color: #623AA2;
-		/* Green */
-		border: none;
-		color: white;
-		padding: 5px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 12px;
-		cursor: pointer;
-		width: 100%;
-	}
-
-	.image_remove:hover {
-		background-color: #4e12b6 !important;
-	}
-
-	.image_remove:disabled {
-		opacity: 0.6;
-		cursor: not-allowed;
-	}
-
-	.sweet-alert button.cancel {
-		background-color: #d43f8d !important;
-		box-shadow: 0 0 0 2px rgba(212, 63, 141, 0.9) !important;
+                .image_preview:disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                }
 
 
-	}
+                .image_remove {
+                    background-color: #623AA2;
+                    /* Green */
+                    border: none;
+                    color: white;
+                    padding: 5px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 12px;
+                    cursor: pointer;
+                    width: 100%;
+                }
 
-	.sweet-alert .sa-input-error {
-		position: absolute;
-		top: 23px;
-		right: 10px;
-		width: 20px;
-		height: 20px;
-		opacity: 0;
-		-webkit-transform: scale(0.5);
-		transform: scale(0.5);
-		-webkit-transform-origin: 50% 50%;
-		transform-origin: 50% 50%;
-		-webkit-transition: all 0.1s;
-		transition: all 0.1s;
-	}
+                .image_remove:hover {
+                    background-color: #4e12b6 !important;
+                }
 
-	.sweet-alert .sa-error-container p {
-		/* display: inline-block; */
-		padding: 0px;
-		margin: auto;
-		font-weight: bold;
+                .image_remove:disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                }
 
-	}
+                .sweet-alert button.cancel {
+                    background-color: #d43f8d !important;
+                    box-shadow: 0 0 0 2px rgba(212, 63, 141, 0.9) !important;
 
 
-	.sweet-alert .sa-error-container.show {
-		margin-bottom: 20px !important;
-	}
+                }
 
-	/* 
+                .sweet-alert .sa-input-error {
+                    position: absolute;
+                    top: 23px;
+                    right: 10px;
+                    width: 20px;
+                    height: 20px;
+                    opacity: 0;
+                    -webkit-transform: scale(0.5);
+                    transform: scale(0.5);
+                    -webkit-transform-origin: 50% 50%;
+                    transform-origin: 50% 50%;
+                    -webkit-transition: all 0.1s;
+                    transition: all 0.1s;
+                }
+
+                .sweet-alert .sa-error-container p {
+                    /* display: inline-block; */
+                    padding: 0px;
+                    margin: auto;
+                    font-weight: bold;
+
+                }
+
+
+                .sweet-alert .sa-error-container.show {
+                    margin-bottom: 20px !important;
+                }
+
+                /* 
 	.sweet-alert button.cancel:hover {
 		background-color: #f2325e !important;
 	} */
 
 
 
-	/* .sweet-alert button.cancel:focus {
+                /* .sweet-alert button.cancel:focus {
 		background-color: #f2325e !important;
 		box-shadow: rgba(197, 205, 211, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset !important;
 	} */
-	.carousel,
-	.item,
-	.active {
-		height: 100%;
-	}
+                .carousel,
+                .item,
+                .active {
+                    height: 100%;
+                }
 
-	.carousel-inner {
-		height: 100%;
-	}
+                .carousel-inner {
+                    height: 100%;
+                }
 
-	.fill {
-		width: 100%;
-		height: 100%;
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-color: #5e2dd8;
-		-o-background-size: cover;
-	}
-
-
-	.fill-first-bg {
-		height: 100% !important;
-		background-position: center;
-		-webkit-background-size: 100%;
-		-moz-background-size: 100%;
-		background-repeat: no-repeat;
-		background-size: auto;
-		background-color: #5e2dd8;
-		-o-background-size: 100%;
-	}
-
-	.carousel-item-background {
-		background: rgba(0, 0, 0, 0.3);
-
-	}
-
-	.carousel-item-background.first {
-		background: rgba(23, 162, 184, 0.9);
+                .fill {
+                    width: 100%;
+                    height: 100%;
+                    background-position: center;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-color: #5e2dd8;
+                    -o-background-size: cover;
+                }
 
 
-	}
+                .fill-first-bg {
+                    height: 100% !important;
+                    background-position: center;
+                    -webkit-background-size: 100%;
+                    -moz-background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                    background-color: #5e2dd8;
+                    -o-background-size: 100%;
+                }
+
+                .carousel-item-background {
+                    background: rgba(0, 0, 0, 0.3);
+
+                }
+
+                .carousel-item-background.first {
+                    background: rgba(23, 162, 184, 0.9);
 
 
-
-	@media (max-width: 576px) {
-		.carousel-inner {
-			height: 250px;
-		}
-
-		.carousel-caption.first {
-			display: block;
-			top: 0%;
+                }
 
 
 
-		}
+                @media (max-width: 576px) {
+                    .carousel-inner {
+                        height: 250px;
+                    }
 
-		.carousel-item-background.is_berita {
-			display: block !important;
-			background: rgba(0, 0, 0, 0.4) !important;
-		}
-
-		.carousel-caption.is_berita {
-			display: block !important;
-			top: 0%;
+                    .carousel-caption.first {
+                        display: block;
+                        top: 0%;
 
 
 
-		}
+                    }
 
-		.carousel-caption h3 {
-			font-size: 10pt !important;
-		}
+                    .carousel-item-background.is_berita {
+                        display: block !important;
+                        background: rgba(0, 0, 0, 0.4) !important;
+                    }
 
-		.carousel-caption.first h3 {
-			margin: auto !important;
+                    .carousel-caption.is_berita {
+                        display: block !important;
+                        top: 0%;
 
 
-		}
 
-	}
+                    }
 
-	.carousel-caption.next {
-		top: auto !important;
-		bottom: 0 !important;
+                    .carousel-caption h3 {
+                        font-size: 10pt !important;
+                    }
 
-	}
+                    .carousel-caption.first h3 {
+                        margin: auto !important;
 
-	.latar-bottom {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		z-index: 1;
-	}
 
-	.latar-bottom img {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
-</style>
+                    }
+
+                }
+
+                .carousel-caption.next {
+                    top: auto !important;
+                    bottom: 0 !important;
+
+                }
+
+                .latar-bottom {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 1;
+                }
+
+                .latar-bottom img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            </style>
             <div class="col-md-7 col-12 d-flex align-items-stretch bg-transparent">
                 <div class="card bg-transparent">
                     <div id="carousel-captions" class="carousel slide" data-ride="carousel">
@@ -269,9 +269,11 @@
                                 <div class="fill" style="border-radius: 10px !important; background-image: url('<?php echo base_url().$slider_gambar['lokasi'].'sedang_'.$gambar['gambar']?>');
                                                         !important;">
                                 </div>
+                                <div class="carousel-item-background d-none d-md-block "
+                                    style="border-radius: 10px !important;"></div>
                                 <div class="carousel-caption  next d-none d-md-block ">
                                     <h3 style="color: #25252a;">
-                                        <?= $gambar['judul'] ?> </h3>
+                                    <?= $gambar['judul'] ?> </h3>
                                 </div>
                             </div>
                             <?php $active = false; ?>
@@ -482,30 +484,36 @@
             <img src="<?= base_url('assets/mytheme/images/icon/density.svg'); ?>" alt="">
             <br>
             <small style="color: black;" data-name="dusun"></small>
-        <a class="btn btn-blue link-small text-sm-center" href="<?= site_url(); ?>buku-tamu" target="_blank" data-toggle="tooltip"
-            data-placement="top" title="Rekap Layanan Buku Tamu">
-            <img src="<?= base_url('assets/mytheme/images/icon/ebook.svg'); ?>" alt="">
-            <br>
-            <small style="color: black;" data-name="ebook"></small>
-        </a>
-        <a class="btn btn-blue link-small text-sm-center" href="<?= site_url(); ?>pengaduan" target="_blank" data-toggle="tooltip"
-            data-placement="top" title="Pengaduan/Lapor">
-            <img src="<?= base_url('assets/mytheme/images/icon/complaint.svg'); ?>" alt="">
-            <br>
-            <small style="color: black;"><span style="color: black; font-size: 9px;">LAPOR</span><p style="color: black;margin-top: -5px; font-size: 9px;">KE DESA</p></small>
-        </a>
-        <a class="btn btn-blue link-small text-sm-center" href="<?= site_url(); ?>pembangunan" target="_blank" data-toggle="tooltip"
-            data-placement="top" title="Dokumentasi Kegiatan Pembangunan">
-            <img src="<?= base_url('assets/mytheme/images/icon/trowel.svg'); ?>" alt="">
-            <br>
-            <small style="color: black;"><span style="color: black; font-size: 9px;">PEMBANGUNAN</span><p style="color: black;margin-top: -5px; font-size: 9px;">SARANA</p></small>
-        </a>
-        <a class="btn btn-blue link-small text-sm-center" href="<?= site_url(); ?>lapak" target="_blank" data-toggle="tooltip"
-            data-placement="top" title="E-PASAR Desa Untuk Warga">
-            <img src="<?= base_url('assets/mytheme/images/icon/market.svg'); ?>" alt="">
-            <br>
-            <small style="color: black;"><span style="color: black; font-size: 9px;">E-PASAR</span><p style="color: black;margin-top: -5px; font-size: 9px;">DESA</p></small>
-        </a>
+            <a class="btn btn-blue link-small text-sm-center" href="<?= site_url(); ?>buku-tamu" target="_blank"
+                data-toggle="tooltip" data-placement="top" title="Rekap Layanan Buku Tamu">
+                <img src="<?= base_url('assets/mytheme/images/icon/ebook.svg'); ?>" alt="">
+                <br>
+                <small style="color: black;" data-name="ebook"></small>
+            </a>
+            <a class="btn btn-blue link-small text-sm-center" href="<?= site_url(); ?>pengaduan" target="_blank"
+                data-toggle="tooltip" data-placement="top" title="Pengaduan/Lapor">
+                <img src="<?= base_url('assets/mytheme/images/icon/complaint.svg'); ?>" alt="">
+                <br>
+                <small style="color: black;"><span style="color: black; font-size: 9px;">LAPOR</span>
+                    <p style="color: black;margin-top: -5px; font-size: 9px;">KE DESA</p>
+                </small>
+            </a>
+            <a class="btn btn-blue link-small text-sm-center" href="<?= site_url(); ?>pembangunan" target="_blank"
+                data-toggle="tooltip" data-placement="top" title="Dokumentasi Kegiatan Pembangunan">
+                <img src="<?= base_url('assets/mytheme/images/icon/trowel.svg'); ?>" alt="">
+                <br>
+                <small style="color: black;"><span style="color: black; font-size: 9px;">PEMBANGUNAN</span>
+                    <p style="color: black;margin-top: -5px; font-size: 9px;">SARANA</p>
+                </small>
+            </a>
+            <a class="btn btn-blue link-small text-sm-center" href="<?= site_url(); ?>lapak" target="_blank"
+                data-toggle="tooltip" data-placement="top" title="E-PASAR Desa Untuk Warga">
+                <img src="<?= base_url('assets/mytheme/images/icon/market.svg'); ?>" alt="">
+                <br>
+                <small style="color: black;"><span style="color: black; font-size: 9px;">E-PASAR</span>
+                    <p style="color: black;margin-top: -5px; font-size: 9px;">DESA</p>
+                </small>
+            </a>
     </div>
     <div class="card box-primary-shadow">
         <div class="card-body text-center">
