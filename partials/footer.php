@@ -149,7 +149,7 @@
 <script>
 	$(document).ready(function () {
 		if ($("#statistik").length) {
-			const a = "https://dataset.desadruntenkulon.com/",
+			const a = "<?= config_item('dashboard_info') ?>",
 				l = `api/info-dashboard`;
 			try {
 				$.ajax({
@@ -205,7 +205,7 @@
                     "emptyTable": "Tidak ada data yang dapat ditampilkan"
                 },
                 ajax: {
-                    url: "https://dataset.desadruntenkulon.com/api/info-daftar-permohonan-surat",
+                    url: "<?= config_item('daftar_permohonan_surat') ?>",
                 },
                 columns: [
 					{
@@ -265,7 +265,7 @@
                     "emptyTable": "Tidak ada data yang dapat ditampilkan"
                 },
                 ajax: {
-                    url: "https://dataset.desadruntenkulon.com/api/info-log-surat",
+                    url: "<?= config_item('log_surat_anjungan') ?>",
                 },
                 columns: [
 					{
