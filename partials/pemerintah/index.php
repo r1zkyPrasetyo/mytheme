@@ -76,7 +76,7 @@
                         style="background: url('<?= $data['foto'] ?>') center center;"></span>
                       <h4 class="h4 mb-0 mt-3"><?= $data['nama'] ?></h4>
                       <p class="card-text mb-0"><?= $data['jabatan'] ?></p>
-                      <p class="card-text mb-0"><?= $data['status_kehadiran'] == 'hadir' ? 'Hadir' : '' ?></p>
+                      <p class="card-text mb-0"><?= $data['status_kehadiran'] == 'hadir' ? 'Hadir' : 'Tidak dikantor' ?></p>
                     </div>
                     <div class="card-footer text-center">
                       <div class="row user-social-detail">
