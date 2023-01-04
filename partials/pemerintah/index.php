@@ -67,21 +67,16 @@
 
             <div class="tab-pane" id="tab-61">
               <ul class="widget-users row">
-                <?php if ($pemerintah): ?>
-                <?php foreach ($pemerintah as $data): ?>
-                <li class="col-lg-4  col-md-6 col-sm-12 col-12">
+              <?php foreach($aparatur_desa['daftar_perangkat'] as $data) : ?>
+                  <li class="col-lg-4  col-md-6 col-sm-12 col-12">
                   <div class="card">
                     <div class="card-body text-center">
                       <span class="avatar avatar-xxl brround cover-image"
-                        data-image-src="<?= AmbilFoto($data['foto'], '', $data['id_sex']) ?>"
-                        style="background: url('<?= AmbilFoto($data['foto'], '', $data['id_sex']) ?>') center center;"></span>
+                        data-image-src="<?= $data['foto'] ?>"
+                        style="background: url('<?= $data['foto'] ?>') center center;"></span>
                       <h4 class="h4 mb-0 mt-3"><?= $data['nama'] ?></h4>
                       <p class="card-text mb-0"><?= $data['jabatan'] ?></p>
-                      <?php if ($this->setting->tampilkan_kehadiran && $data['status_kehadiran'] == 'hadir') : ?>
-                      <p class="card-text mb-0">Hadir</p>
-                      <?php else: ?>
-                      <br>
-                      <?php endif ?>
+                      <p class="card-text mb-0"><?= $data['status_kehadiran'] == 'hadir' ? 'Hadir' : '' ?></p>
                     </div>
                     <div class="card-footer text-center">
                       <div class="row user-social-detail">
@@ -98,12 +93,7 @@
                     </div>
                   </div>
                 </li>
-                <?php endforeach ?>
-                <?php else: ?>
-                <h5>Pemerintah <?= ucwords($this->setting->sebutan_desa . ' ' . $desa['nama_desa']) ?> tidak tersedia.
-                </h5>
-                <?php endif ?>
-
+                <?php endforeach; ?>
               </ul>
             </div>
             <div class="tab-pane" id="tab-71">
