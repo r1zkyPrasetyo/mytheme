@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row align-items-center flex-row-reverse">
             <div class="col-md-12 col-sm-12 text-center">
-                Copyright © <?= date('Y') ?><a href="#"> <?= $this->setting->website_title. ' ' . ucwords($this->setting->sebutan_desa). (($desa['nama_desa']) ? ' ' . $desa['nama_desa'] : ''); ?></a>. Designed by <a href="#"> Drunten Kulon </a> All
+                Copyright © <?= date('Y') ?><a href="#"> <?= $this->setting->website_title. ' ' . ucwords($this->setting->sebutan_desa). (($desa['nama_desa']) ? ' ' . $desa['nama_desa'] : ''); ?></a>. Designed by <a href="#"> <?= $this->setting->website_title. ' ' . ucwords($this->setting->sebutan_desa). (($desa['nama_desa']) ? ' ' . $desa['nama_desa'] : ''); ?> </a> All
                 rights reserved.
             </div>
         </div>
@@ -13,7 +13,14 @@
 </footer>
 <!-- FOOTER END -->
 </div>
-
+<div class="float-sm">
+<?php foreach ($sosmed As $data): ?>
+		<div class="fl-fl float-<?= strtolower($data['nama']) ?>">
+			<i id="icon" class="fa fa-<?= strtolower($data['nama']) ?>"></i>
+			<a href="<?= $data['link']?>" target="_blank" style="color: white;"> <?= $data['nama'] ?></a>
+		</div>
+	<?php endforeach; ?>
+</div>
 <!-- BACK-TO-TOP -->
 <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 <!-- JQUERY JS -->
@@ -289,5 +296,21 @@
             });
         }
     });
-
+</script>
+<script type="text/javascript">
+    $(document).on('ready', function() {
+	$('.logo-slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
+		infinite: true
+	});
+    $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true
+      });
+    });
 </script>

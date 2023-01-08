@@ -11,18 +11,20 @@
                             <?php foreach ($slider_gambar['gambar'] as $gambar) : ?>
                             <?php $file_gambar = $slider_gambar['lokasi'] . 'sedang_' . $gambar['gambar']; ?>
                             <?php if(is_file($file_gambar)) : ?>
-                            <div class="carousel-item <?php echo ($active == true)?"active":"" ?>" style="border-radius: 10px !important;" onclick="location.href='<?='artikel/'.buat_slug($gambar); ?>'">
-                                                <!-- <img src="" alt=""> -->
-                                                <div class="fill"
-                                                    style="border-radius: 10px !important; background-image:url('<?php echo base_url().$slider_gambar['lokasi'].'sedang_'.$gambar['gambar']?>');">
-                                                </div>
-                                                <div class="carousel-item-background d-none d-md-block "
-                                                    style="border-radius: 10px !important;"></div>
-                                                <div class="carousel-caption  next d-none d-md-block ">
-                                                    <h3>
-                                                    <?= $gambar['judul'] ?> </h3>
-                                                </div>
-                                            </div>
+                            <div class="carousel-item <?php echo ($active == true)?"active":"" ?>"
+                                style="border-radius: 10px !important;"
+                                onclick="location.href='<?='artikel/'.buat_slug($gambar); ?>'">
+                                <!-- <img src="" alt=""> -->
+                                <div class="fill"
+                                    style="border-radius: 10px !important; background-image:url('<?php echo base_url().$slider_gambar['lokasi'].'sedang_'.$gambar['gambar']?>');">
+                                </div>
+                                <div class="carousel-item-background d-none d-md-block "
+                                    style="border-radius: 10px !important;"></div>
+                                <div class="carousel-caption  next d-none d-md-block ">
+                                    <h3>
+                                        <?= $gambar['judul'] ?> </h3>
+                                </div>
+                            </div>
                             <?php $active = false; ?>
                             <?php endif; ?>
                             <?php endforeach; ?>
@@ -103,110 +105,41 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-12 d-flex align-items-stretch">
-                        <div class="card box-primary-shadow">
-                            <div class="card-body row ">
-                                <h5 class="font-weight-bolder col-12 text-center">Penilaian Pelayanan
-                                </h5>
-
-                                <div class=" col-4 text-center m-auto ">
-                                    <h1 class="my-0 font-weight-bolder">
-                                        4.8 </h1>
-                                    <div class="text-warning">
-
-                                        <i class=" fa fa-star"></i>
-                                        <i class=" fa fa-star"></i>
-                                        <i class=" fa fa-star"></i>
-                                        <i class=" fa fa-star"></i>
-                                        <i class=" fa fa-star"></i>
-
-                                    </div>
-                                    <span class="m-0 p-0">
-                                        <i class="fa fa-user"></i>
-                                        6,692 </span>
-                                </div>
-                                <div class=" col-8 my-auto ml-0 p-0 ">
-                                    <div class="d-flex flex-row justify-content-between mb-1">
-                                        <div style="font-size: 0.8rem;"
-                                            class="d-flex flex-colum justify-content-between"><span class="mr-1"><i
-                                                    class="fa fa-star"></i></span><span>5</span></div>
-                                        <div class="d-block w-100 ml-2">
-                                            <div class="progress  progress-md">
-                                                <div class="progress-bar bg-primary" role="progressbar"
-                                                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
-                                                    style="width: 90%;">
-                                                    90%
-                                                </div>
-                                            </div>
+                    <div class="col-md-6 col-6 d-flex align-items-stretch" data-toggle="tooltip" data-placement="top"
+                        title="" data-original-title="Admin Desa">
+                        <a href="<?= site_url('siteman') ?>">
+                            <div class="card p-2  bg-success img-card box-success-shadow">
+                                <div class="card-body p-2">
+                                    <div class="d-flex">
+                                        <div class="text-white">
+                                            <h3 class="mb-0 number-font">LAYANAN ADMIN DESA</h3>
                                         </div>
-                                    </div>
-                                    <div class="d-flex flex-row justify-content-between mb-1">
-                                        <div style="font-size: 0.8rem;"
-                                            class="d-flex flex-colum justify-content-between"><span class="mr-1"><i
-                                                    class="fa fa-star"></i></span><span>4</span></div>
-                                        <div class="d-block w-100 ml-2">
-                                            <div class="progress  progress-md">
-                                                <div class="progress-bar bg-secondary" role="progressbar"
-                                                    aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"
-                                                    style="width: 7%;">
-                                                    7%
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row justify-content-between mb-1">
-                                        <div style="font-size: 0.8rem;"
-                                            class="d-flex flex-colum justify-content-between"><span class="mr-1"><i
-                                                    class="fa fa-star"></i></span><span>3</span></div>
-                                        <div class="d-block w-100 ml-2">
-                                            <div class="progress  progress-md">
-                                                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="3"
-                                                    aria-valuemin="0" aria-valuemax="100" style="width: 3%;">
-                                                    3%
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row justify-content-between mb-1">
-                                        <div style="font-size: 0.8rem;"
-                                            class="d-flex flex-colum justify-content-between"><span class="mr-1"><i
-                                                    class="fa fa-star"></i></span><span>2</span></div>
-                                        <div class="d-block w-100 ml-2">
-                                            <div class="progress  progress-md">
-                                                <div class="progress-bar bg-warning" role="progressbar"
-                                                    aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"
-                                                    style="width: 1%;">
-                                                    1%
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row justify-content-between">
-
-                                        <div style="font-size: 0.8rem;"
-                                            class="d-flex flex-colum justify-content-between"><span class="mr-1"><i
-                                                    class="fa fa-star"></i></span><span>1</span></div>
-                                        <div class="d-block w-100 ml-2 ">
-                                            <div class="progress  progress-md">
-                                                <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="0"
-                                                    aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-                                                    0%
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div class="ml-auto d-lg-block d-none"></div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-6 d-flex align-items-stretch" data-toggle="tooltip" data-placement="top"
+                        title="" data-original-title="Layanan Mandiri">
+                        <a href="<?= site_url('layanan-mandiri') ?>">
+                            <div class="card p-2  bg-primary img-card box-primary-shadow">
+                                <div class="card-body p-2">
+                                    <div class="d-flex">
+                                        <div class="text-white">
+                                            <h3 class="mb-0 number-font">LAYANAN MANDIRI</h3>
+                                        </div>
+                                        <div class="ml-auto d-lg-block d-none"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <?php if (config_item('counter_box') == 'aktifkan') :?>
     <div class="d-flex justify-content-center flex-wrap">
         <a class="btn btn-blue link-small text-sm-center" href="#" target="_blank" data-toggle="tooltip"
             data-placement="top" title="Surat Tercetak">
@@ -262,58 +195,67 @@
                 </small>
             </a>
     </div>
-    <div class="card box-primary-shadow">
-        <div class="card-body text-center">
-            <h5 class="font-weight-bold ">
-                Untuk tetap menggunakan pelayanan ini silahkan lihat jam operasional dibawah ini
-            </h5>
+    <?php else : ?>
+    <?php endif ?>
+    <div class="card CardPengaduan">
+        <div class="card-header bg-success text-white">
+            <h3 class="card-title">JAM LAYANAN KANTOR</h3>
+            <div class="card-options">
+                <a href="#" class="card-options-collapse text-white" data-toggle="card-collapse"><i
+                        class="fe fe-chevron-up"></i></a>
+                <a href="#" class="card-options-fullscreen text-white" data-toggle="card-fullscreen"><i
+                        class="fe fe-maximize"></i></a>
+            </div>
         </div>
+        <div class="card-body">
+            <div class="row row-cards ">
+                <div class="row mx-2">
+                    <?php foreach ($jam_kerja as $value) : ?>
+                    <?php if ($value->status) : ?>
+                    <div class="col-md-3 col-6 d-flex" data-toggle="tooltip" data-placement="top"
+                        title="Jam Operasional Hari <?= $value->nama_hari ?>">
 
-        <div class="row mx-2">
-            <?php foreach ($jam_kerja as $value) : ?>
-            <?php if ($value->status) : ?>
-            <div class="col-md-3 col-6 d-flex" data-toggle="tooltip" data-placement="top"
-                title="Jam Operasional Hari <?= $value->nama_hari ?>">
-
-                <div class="card p-2 bg-success img-card box-success-shadow">
-                    <div class="p-2 card-body">
-                        <div class="d-flex">
-                            <div class="text-white">
-                                <h3 class="mb-0 number-font"><?= $value->nama_hari ?></h3>
-                                <p class="text-white mb-0"><?= $value->jam_masuk ?></p>
+                        <div class="card p-2 bg-success img-card box-success-shadow">
+                            <div class="p-2 card-body">
+                                <div class="d-flex">
+                                    <div class="text-white">
+                                        <h3 class="mb-0 number-font"><?= $value->nama_hari ?></h3>
+                                        <p class="text-white mb-0"><?= $value->jam_masuk ?></p>
+                                    </div>
+                                    <div class="ml-auto d-lg-block d-none"> <i
+                                            class="fa fa-clock-o text-white fs-30 mr-2 mt-2"></i> </div>
+                                </div>
                             </div>
-                            <div class="ml-auto d-lg-block d-none"> <i
-                                    class="fa fa-clock-o text-white fs-30 mr-2 mt-2"></i> </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <?php else : ?>
-            <div class="col-md-3 col-6 d-flex" data-toggle="tooltip" data-placement="top"
-                title="Jam Operasional Hari <?= $value->nama_hari ?>,  Tidak Ada Pelayanan">
+                    <?php else : ?>
+                    <div class="col-md-3 col-6 d-flex" data-toggle="tooltip" data-placement="top"
+                        title="Jam Operasional Hari <?= $value->nama_hari ?>,  Tidak Ada Pelayanan">
 
-                <div class="card p-2  bg-info  img-card box-primary-shadow">
-                    <div class="p-2 card-body">
-                        <div class="d-flex">
-                            <div class="text-white">
-                                <h3 class="mb-0 number-font"><?= $value->nama_hari ?></h3>
-                                <p class="text-white mb-0">
+                        <div class="card p-2  bg-info  img-card box-primary-shadow">
+                            <div class="p-2 card-body">
+                                <div class="d-flex">
+                                    <div class="text-white">
+                                        <h3 class="mb-0 number-font"><?= $value->nama_hari ?></h3>
+                                        <p class="text-white mb-0">
 
-                                    Tidak Ada Pelayanan
-                                </p>
+                                            Tidak Ada Pelayanan
+                                        </p>
+                                    </div>
+                                    <div class="ml-auto d-lg-block d-none"> <i
+                                            class="fa fa-clock-o text-white fs-30 mr-2 mt-2"></i> </div>
+                                </div>
                             </div>
-                            <div class="ml-auto d-lg-block d-none"> <i
-                                    class="fa fa-clock-o text-white fs-30 mr-2 mt-2"></i> </div>
                         </div>
                     </div>
+                    <?php endif ?>
+                    <?php endforeach ?>
                 </div>
             </div>
-            <?php endif ?>
-            <?php endforeach ?>
         </div>
-
     </div>
 
+    <?php if (config_item('statistik_surat') == 'aktifkan') :?>
     <!-- ROW-1 CLOSED -->
     <!-- <hr class="message-inner-separator"> -->
     <!-- ROW-2 OPEN -->
@@ -376,6 +318,23 @@
         </div>
     </div>
     <!-- ROW-2 CLOSED -->
+    <?php else : ?>
+    <?php endif ?>
+    <!-- APARATUR DESA -->
+    <div class="card box-primary-shadow">
+        <div class="card-body text-center">
+            <h5 class="font-weight-bold ">
+                APARATUR DESA
+            </h5>
+        </div>
+
+        <div class="logo-slider">
+            <?php foreach($aparatur_desa['daftar_perangkat'] as $data) : ?>
+            <img class="item" data-lazy="<?= $data['foto'] ?>" data-srcset="<?= $data['foto'] ?>" data-sizes="80vw"
+                title="<?= $data['nama']?>">
+            <?php endforeach; ?>
+        </div>
+    </div>
     <?php $this->load->view("$folder_themes/partials/artikel_terkini.php"); ?>
 </div>
 <br>
@@ -414,4 +373,24 @@
         </div>
     </div>
 
+</div>
+<div class="card box-primary-shadow">
+    <div class="card-body text-center">
+        <h5 class="font-weight-bold ">
+            SINERGI PROGRAM
+        </h5>
+    </div>
+
+    <div class="logo-slider">
+        <?php foreach($sinergi_program as $key => $program) : $baris[$program['baris']][$program['kolom']] = $program; endforeach; ?>
+        <?php foreach($baris as $baris_program) : ?>
+        <?php $width = 100/count($baris_program)-count($baris_program)?>
+        <?php foreach($baris_program as $key => $program) : ?>
+        <!-- Logo size 400x200 -->
+        <div class="item"><a href="<?= $program['tautan']?>"><img
+                    src="<?= base_url().LOKASI_GAMBAR_WIDGET.$program['gambar']?>" alt="" width="80px"
+                    title="<?= $program['judul']?>"></a></div>
+        <?php endforeach; ?>
+        <?php endforeach; ?>
+    </div>
 </div>

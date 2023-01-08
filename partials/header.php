@@ -7,8 +7,8 @@
             <a class="animated-arrow hor-toggle horizontal-navtoggle"><span></span></a>
             <div class="">
                 <a class="header-brand1 d-flex" href="<?= site_url(); ?>">
-                    <img src="<?= gambar_desa($desa['logo']); ?>" width="45" class="mr-2 desktop-logo" alt="logo">
-                    <img src="<?= gambar_desa($desa['logo']); ?>" width="45" class="mr-2 light-logo" alt="logo">
+                    <img src="<?= gambar_desa($desa['logo']); ?>" width="60" class="mr-2 desktop-logo" alt="logo">
+                    <img src="<?= gambar_desa($desa['logo']); ?>" width="60" class="mr-2 light-logo" alt="logo">
                     <div class="text-dark">
                         <h5 class="m-0 p-0 pt-1"><strong>LAYANAN <?= $this->setting->website_title. ' ' . ucwords($this->setting->sebutan_desa). (($desa['nama_desa']) ? ' ' . $desa['nama_desa'] : ''); ?></strong></h5>
                         <h4 class="font-weight-bolder m-0 p-0"><?= ucwords($this->setting->sebutan_kecamatan_singkat." ".$desa['nama_kecamatan'])?> <?= ucwords($this->setting->sebutan_kabupaten_singkat." ".$desa['nama_kabupaten'])?></h4>

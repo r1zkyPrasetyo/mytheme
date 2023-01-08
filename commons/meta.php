@@ -12,7 +12,7 @@
 <meta name="keywords" content="<?= $this->setting->website_title . ' '.  $desa_title; ?>"/>
 <meta property="og:site_name" content="<?=  $desa_title;?>"/>
 <meta property="og:type" content="article"/>
-<meta property="fb:app_id" content="147912828718">
+<meta property="facebook:app_id" content="147912828718">
 <title>
 <?php if ($single_artikel["judul"] == ""): ?>
 	<?= $this->setting->website_title . ' '.  $desa_title; ?>
@@ -46,6 +46,11 @@
 <style type="text/css">
     .ui-datepicker{z-index:100000!important}#loadingAjax,.MyLoading,.lds-hourglass{z-index:99999;position:fixed;top:0;left:0;bottom:0;right:0;margin:auto}#loadingAjax,.MyLoading{overflow:hidden;cursor:wait;background-color:rgba(255,255,255,.2)}.image_preview,.image_remove{border:none;color:#fff;padding:5px;text-align:center;text-decoration:none;display:inline-block;font-size:12px;cursor:pointer;width:100%}.lds-hourglass{background-color:transparent}.sweet-alert fieldset{border:none;position:relative;display:block}.image_preview{background-color:#d43f8d}.image_preview:hover{background-color:#b11f6a}.image_preview:disabled,.image_remove:disabled{opacity:.6;cursor:not-allowed}.image_remove{background-color:#623aa2}.image_remove:hover{background-color:#4e12b6!important}.sweet-alert button.cancel{background-color:#d43f8d!important;box-shadow:0 0 0 2px rgba(212,63,141,.9)!important}.sweet-alert .sa-input-error{position:absolute;top:23px;right:10px;width:20px;height:20px;opacity:0;-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:.1s;transition:.1s}.sweet-alert .sa-error-container p{padding:0;margin:auto;font-weight:700}.sweet-alert .sa-error-container.show{margin-bottom:20px!important}
 	.table.dataTable thead th{text-align:center;vertical-align:middle;background-color:#d2d6de!important}
+	*{box-sizing:border-box}.slider{width:50%;margin:100px auto}.slick-slide{margin:0 20px;transition:.3s ease-in-out;opacity:.2}.slick-slide img{width:100%}.slick-next:before,.slick-prev:before{color:#000}.slick-active{opacity:.5}.slick-current{opacity:1}
+	.logo-slider .item{background-color:#fff;box-shadow:0 4px 5px #cacaca;border-radius:8px;border:2px solid #111}.logo-slider .slick-slide{margin:15px}.slick-dots li.slick-active button:before{color:#ff5722}.slick-dots li button:before{font-size:12px}.slick-next:before,.slick-prev:before{color:#ff8159;font-size:24px}.item:hover{display:block;transition:.3s;transform:scale(1.1) translateY(-5px)}
+	/* Floating Social Media Bar Style Starts Here */
+	.fl-fl{background:linear-gradient(to left,#01d580 0,#03afa7 100%)!important;text-transform:uppercase;letter-spacing:3px;width:190px;position:fixed;right:-160px;z-index:1000;font:10px Arial;-webkit-transition:.25s;-moz-transition:.25s;-ms-transition:.25s;-o-transition:.25s;transition:.25s}#icon{font-size:20px;color:#fff;padding:10px 0;width:40px;margin-left:8px}.fl-fl:hover{right:0}.float-facebook{top:160px}.float-twitter{top:215px}.float-whatsapp{top:270px}.float-telegram{top:325px}.float-instagram{top:380px}.float-pn{top:435px}
+
 </style>
 <!-- STYLE CSS -->
 <link href="<?= base_url('assets/mytheme/css/style.css'); ?>" rel="stylesheet" />
@@ -66,11 +71,15 @@
 <!--SWEET ALERT CSS-->
 <link href="<?= base_url('assets/mytheme/plugins/sweet-alert/sweetalert.css'); ?>" rel="stylesheet" />
 <!-- TABS STYLES -->
+<!-- SLICK STYLES -->
+<link href="<?= base_url('assets/mytheme/slick/slick.css'); ?>" rel="stylesheet" />
+<link href="<?= base_url('assets/mytheme/slick/slick-theme.css'); ?>" rel="stylesheet" />
+
 <link href="<?= base_url('assets/mytheme/css/tabs.css'); ?>" rel="stylesheet" />
 <!-- DATA TABLE CSS -->
 <link href="<?= base_url('assets/mytheme/plugins/datatable/dataTables.bootstrap4.min.css'); ?>" rel="stylesheet" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ if (window.scrollY == 0) window.scrollTo(0,1); } </script>
-<script language='javascript' src="<?= base_url('assets/front/js/jquery.min.js'); ?>"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script language='javascript' src="<?= base_url('assets/front/js/jquery.cycle2.min.js'); ?>"></script>
 <script language='javascript' src="<?= base_url('assets/front/js/jquery.cycle2.carousel.js'); ?>"></script>
 <script src="<?= base_url('assets/js/leaflet.js'); ?>"></script>
@@ -89,6 +98,7 @@
 <script src="<?= base_url('assets/js/peta.js'); ?>"></script>
 <script src="<?= base_url() ?>assets/bootstrap/js/jquery.dataTables.min.js"></script>
 <script src="<?= base_url() ?>assets/bootstrap/js/dataTables.bootstrap.min.js"></script>
+<script src="<?= base_url() ?>assets/mytheme/slick/slick.js"></script>
 <?php $this->load->view('global/validasi_form', ['web_ui' => true]); ?>
 <script type="text/javascript">
 	var BASE_URL = "<?= base_url(); ?>";
@@ -130,8 +140,8 @@
 <style type="text/css">
 	#loadingAjax,.MyLoading,.lds-hourglass{z-index:99999;position:fixed;top:0;left:0;bottom:0;right:0;margin:auto}.active,.carousel,.carousel-inner,.fill,.item{height:100%}#jam{text-align:center;color:#fff}#loadingAjax,.MyLoading{overflow:hidden;cursor:wait;background-color:rgba(255,255,255,.2)}.image_preview,.image_remove{border:none;color:#fff;padding:5px;text-align:center;text-decoration:none;display:inline-block;font-size:12px;cursor:pointer;width:100%}.lds-hourglass{background-color:transparent}.sweet-alert fieldset{border:none;position:relative;display:block}.image_preview{background-color:#d43f8d}.image_preview:hover{background-color:#b11f6a}.image_preview:disabled,.image_remove:disabled{opacity:.6;cursor:not-allowed}.image_remove{background-color:#623aa2}.fill,.fill-first-bg{background-position:center;background-repeat:no-repeat;background-color:#5e2dd8}.image_remove:hover{background-color:#4e12b6!important}.sweet-alert button.cancel{background-color:#d43f8d!important;box-shadow:0 0 0 2px rgba(212,63,141,.9)!important}.sweet-alert .sa-input-error{position:absolute;top:23px;right:10px;width:20px;height:20px;opacity:0;-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:.1s;transition:.1s}.sweet-alert .sa-error-container p{padding:0;margin:auto;font-weight:700}.sweet-alert .sa-error-container.show{margin-bottom:20px!important}.fill{width:100%;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;-o-background-size:cover}.fill-first-bg{height:100%!important;-webkit-background-size:100%;-moz-background-size:100%;background-size:auto;-o-background-size:100%}.carousel-item-background{background:rgba(0,0,0,.3)}.carousel-item-background.first{background:rgba(23,162,184,.9)}@media (max-width:576px){.carousel-inner{height:250px}.carousel-caption.first{display:block;top:0}.carousel-item-background.is_berita{display:block!important;background:rgba(0,0,0,.4)!important}.carousel-caption.is_berita{display:block!important;top:0}.carousel-caption h3{font-size:10pt!important}.carousel-caption.first h3{margin:auto!important}}.carousel-caption.next{top:auto!important;bottom:0!important}
 </style>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.2&appId=147912828718&autoLogAppEvents=1"></script>
+<div id="facebook-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfacebookml=1&version=v3.2&appId=147912828718&autoLogAppEvents=1"></script>
 
 <!--[if lt IE 9]>
 <script src="<?= base_url("$this->theme_folder/$this->theme/assets/js/html5shiv.min.js"); ?>"></script>
