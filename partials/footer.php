@@ -2,6 +2,7 @@
 
 <?php $this->load->view("$folder_themes/partials/copyright.php"); ?>
 </div>
+
 <!-- BACK-TO-TOP -->
 <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 <!-- JQUERY JS -->
