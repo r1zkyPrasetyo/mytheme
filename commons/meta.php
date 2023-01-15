@@ -40,18 +40,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
 <link rel="stylesheet" href="<?= base_url('assets/css/mapbox-gl.css'); ?>"/>
 <link rel="stylesheet" href="<?= base_url('assets/css/peta.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('assets/mytheme/css/style_custom.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('assets/mytheme/css/standar-color.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('assets/mytheme/css/hijau.css'); ?>">
+<link rel="stylesheet" href="<?= base_url('assets/mytheme/css/responsive.css'); ?>">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/dataTables.bootstrap.min.css'); ?>">
 <!-- BOOTSTRAP CSS -->
 <link href="<?= base_url('assets/mytheme/plugins/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" />
-<style type="text/css">
-    .ui-datepicker{z-index:100000!important}#loadingAjax,.MyLoading,.lds-hourglass{z-index:99999;position:fixed;top:0;left:0;bottom:0;right:0;margin:auto}#loadingAjax,.MyLoading{overflow:hidden;cursor:wait;background-color:rgba(255,255,255,.2)}.image_preview,.image_remove{border:none;color:#fff;padding:5px;text-align:center;text-decoration:none;display:inline-block;font-size:12px;cursor:pointer;width:100%}.lds-hourglass{background-color:transparent}.sweet-alert fieldset{border:none;position:relative;display:block}.image_preview{background-color:#d43f8d}.image_preview:hover{background-color:#b11f6a}.image_preview:disabled,.image_remove:disabled{opacity:.6;cursor:not-allowed}.image_remove{background-color:#623aa2}.image_remove:hover{background-color:#4e12b6!important}.sweet-alert button.cancel{background-color:#d43f8d!important;box-shadow:0 0 0 2px rgba(212,63,141,.9)!important}.sweet-alert .sa-input-error{position:absolute;top:23px;right:10px;width:20px;height:20px;opacity:0;-webkit-transform:scale(.5);transform:scale(.5);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:.1s;transition:.1s}.sweet-alert .sa-error-container p{padding:0;margin:auto;font-weight:700}.sweet-alert .sa-error-container.show{margin-bottom:20px!important}
-	.table.dataTable thead th{text-align:center;vertical-align:middle;background-color:#d2d6de!important}
-	*{box-sizing:border-box}.slider{width:50%;margin:100px auto}.slick-slide{margin:0 20px;transition:.3s ease-in-out;opacity:.2}.slick-slide img{width:100%}.slick-next:before,.slick-prev:before{color:#000}.slick-active{opacity:.5}.slick-current{opacity:1}
-	.logo-slider .item{background-color:#fff;box-shadow:0 4px 5px #cacaca;border-radius:8px;border:2px solid #111}.logo-slider .slick-slide{margin:15px}.slick-dots li.slick-active button:before{color:#ff5722}.slick-dots li button:before{font-size:12px}.slick-next:before,.slick-prev:before{color:#ff8159;font-size:24px}.item:hover{display:block;transition:.3s;transform:scale(1.1) translateY(-5px)}
-	/* Floating Social Media Bar Style Starts Here */
-	.fl-fl{background:linear-gradient(to left,#01d580 0,#03afa7 100%)!important;text-transform:uppercase;letter-spacing:3px;width:190px;position:fixed;right:-160px;z-index:1000;font:10px Arial;-webkit-transition:.25s;-moz-transition:.25s;-ms-transition:.25s;-o-transition:.25s;transition:.25s}#icon{font-size:20px;color:#fff;padding:10px 0;width:40px;margin-left:8px}.fl-fl:hover{right:0}.float-facebook{top:160px}.float-twitter{top:215px}.float-whatsapp{top:270px}.float-telegram{top:325px}.float-instagram{top:380px}.float-pn{top:435px}
-
-</style>
 <!-- STYLE CSS -->
 <link href="<?= base_url('assets/mytheme/css/style.css'); ?>" rel="stylesheet" />
 <link href="<?= base_url('assets/mytheme/css-dark/dark-style.css'); ?>" rel="stylesheet" />
