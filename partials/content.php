@@ -50,7 +50,7 @@
                                 <div class="jadwalshalat-judul flexleft">
                                     <div>
                                         <div class="jadwalshalat-judul-inner">
-                                            <img src="<?= base_url('assets/mytheme/images/icon/shalat.svg'); ?>">
+                                            <img src="<?= base_url('assets/mytheme/images/icon/social-media.svg'); ?>">
                                             <div class="flexleft">
                                                 <div>
                                                     <h2>Sosial Media Desa</h2>
@@ -240,7 +240,7 @@
                                 <div class="jadwalshalat-judul flexleft">
                                     <div>
                                         <div class="jadwalshalat-judul-inner">
-                                            <img src="<?= base_url('assets/mytheme/images/icon/shalat.svg'); ?>">
+                                            <img src="<?= base_url('assets/mytheme/images/icon/work.svg'); ?>">
                                             <div class="flexleft">
                                                 <div>
                                                     <h2>Jam Pelayanan Kantor</h2>
@@ -259,8 +259,7 @@
                                         <?php foreach ($jam_kerja as $value) : ?>
                                         <?php if ($value->status) : ?>
                                         <div class="jadwal-box">
-                                            <div class="mosque"><img
-                                                    src="<?= base_url('assets/mytheme/images/icon/work.svg'); ?>">
+                                            <div class="mosque">
                                             </div>
                                             <div style="position:relative;z-index:1;">
                                                 <h3 class="color-1"><?= $value->nama_hari ?></h3>
