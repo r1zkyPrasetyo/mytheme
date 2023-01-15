@@ -1,3 +1,5 @@
+<?php defined('BASEPATH') || exit('No direct script access allowed'); ?>
+
 <div class="col-default">
     <div class="headmod2 bgcolor-1 flexcenter" style="border-radius:5px 5px 0 0;">
         <h1 class="bggrey1 color-2">Transparansi Anggaran</h1>
