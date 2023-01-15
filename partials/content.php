@@ -65,7 +65,7 @@
                                 <div class="jadwalshalat-isi">
                                     <div class="rowsame margin-minlr-5">
                                     <div class="widget-inner flexcenter">
-                                                <a href="https://www.facebook.com/rehmanillah.afani/" target="_blank"
+                                                <a href="https://web.facebook.com/profile.php?id=100071812781256" target="_blank"
                                                     rel="noopener">
                                                     <div class="social-icon flexcenter">
                                                         <svg viewBox="0 0 24 24" width="24" height="24"
@@ -76,7 +76,7 @@
                                                         </svg>
                                                     </div>
                                                 </a>
-                                                <a href="https://twitter.com/Rohman_mukomuko" target="_blank"
+                                                <a href="#" target="_blank"
                                                     rel="noopener">
                                                     <div class="social-icon flexcenter">
                                                         <svg viewBox="0 0 24 24" width="24" height="24"
@@ -87,7 +87,7 @@
                                                         </svg>
                                                     </div>
                                                 </a>
-                                                <a href="https://www.youtube.com/channel/UCsIiVFyJpHXUAiCNDDCddcw"
+                                                <a href="#"
                                                     target="_blank" rel="noopener">
                                                     <div class="social-icon flexcenter">
                                                         <svg viewBox="0 0 24 24" width="24" height="24"
@@ -98,7 +98,7 @@
                                                         </svg>
                                                     </div>
                                                 </a>
-                                                <a href="https://www.instagram.com/Rohman_mukomuko/" target="_blank"
+                                                <a href="https://www.instagram.com/pemdes_druntenkulon/" target="_blank"
                                                     rel="noopener">
                                                     <div class="social-icon flexcenter">
                                                         <svg viewBox="0 0 24 24" width="24" height="24"
@@ -110,7 +110,7 @@
                                                         </svg>
                                                     </div>
                                                 </a>
-                                                <a href="https://api.whatsapp.com/send?phone=+6282269993730"
+                                                <a href="https://api.whatsapp.com/send?phone=6281224276508"
                                                     target="_blank" rel="noopener">
                                                     <div class="social-icon flexcenter">
                                                         <svg viewBox="0 0 24 24" width="24" height="24"
@@ -121,7 +121,7 @@
                                                         </svg>
                                                     </div>
                                                 </a>
-                                                <a href="https://t.me/Rohman_bengkulu" target="_blank" rel="noopener">
+                                                <a href="#" target="_blank" rel="noopener">
                                                     <div class="social-icon flexcenter">
                                                         <svg viewBox="0 0 24 24" width="24" height="24"
                                                             stroke-width="20" xmlns="http://www.w3.org/2000/svg">
