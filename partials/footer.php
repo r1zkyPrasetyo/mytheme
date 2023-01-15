@@ -2,14 +2,6 @@
 
 <?php $this->load->view("$folder_themes/partials/copyright.php"); ?>
 </div>
-<div class="float-sm">
-<?php foreach ($sosmed As $data): ?>
-		<div class="fl-fl float-<?= strtolower($data['nama']) ?>">
-			<i id="icon" class="fa fa-<?= strtolower($data['nama']) ?>"></i>
-			<a href="<?= $data['link']?>" target="_blank" style="color: white;"> <?= $data['nama'] ?></a>
-		</div>
-	<?php endforeach; ?>
-</div>
 <!-- BACK-TO-TOP -->
 <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 <!-- JQUERY JS -->
