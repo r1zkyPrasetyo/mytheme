@@ -1,5 +1,5 @@
 <!-- FOOTER -->
-<?php $this->load->view($folder_themes .'/partials/apbdesa-tema') ?>
+<?php if($transparansi) $this->load->view($folder_themes .'/partials/apbdesa-tema', $transparansi) ?>
 <footer class="footer hor-footer">
     <div class="container">
         <div class="row align-items-center flex-row-reverse">
