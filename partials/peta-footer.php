@@ -188,14 +188,15 @@
             </div>
 
             <script>
-                //Jika posisi kantor desa belum ada, maka posisi peta akan menampilkan seluruh Indonesia
+               //Jika posisi kantor desa belum ada, maka posisi peta akan menampilkan seluruh Indonesia
                 <?php if (!empty($data_config['lat']) && !empty($data_config['lng'])): ?>
-                var posisi = [<?=$data_config['lat'].",".$data_config['lng']?>];
-                var zoom = <?=$data_config['zoom'] ?: 10?>;
+                    var posisi = [<?=$data_config['lat'].",".$data_config['lng']?>];
+                    var zoom = <?=$data_config['zoom'] ?: 10?>;
                 <?php else: ?>
                     var posisi = [-1.0546279422758742,116.71875000000001];
                     var zoom = 10;
                 <?php endif; ?>
+
                 //Style polygon
                 var style_polygon = {
                     stroke: true,
@@ -208,23 +209,15 @@
                 var wilayah_desa = L.map('map_wilayah').setView(posisi, zoom);
 
                 //Menampilkan BaseLayers Peta
-                var baseLayers = getBaseLayers(wilayah_desa, '<?= $this->setting->mapbox_key; ?>');
-                L.control.layers(baseLayers, null, {
-                    position: 'topright',
-                    collapsed: true
-                }).addTo(wilayah_desa);
+                var baseLayers = getBaseLayers(wilayah_desa, '<?=$this->setting->mapbox_key?>');
 
-                //Jika posisi kantor desa belum ada, maka posisi peta akan menampilkan seluruh Indonesia
-                <?php if (!empty($data_config['lat']) && !empty($data_config['lng'])): ?>
-                var kantor_desa = L.marker(posisi).addTo(wilayah_desa);
+                L.control.layers(baseLayers, null, {position: 'topright', collapsed: true}).addTo(wilayah_desa);
+
+                <?php if (!empty($data_config['path'])): ?>
+                    var polygon_desa = <?= $data_config['path']; ?>;
+                    var kantor_desa = L.polygon(polygon_desa, style_polygon).bindTooltip("Wilayah Desa").addTo(wilayah_desa);
+                    wilayah_desa.fitBounds(kantor_desa.getBounds());
                 <?php endif; ?>
-
-                var polygon_desa = [
-                   
-                ];
-                var kantor_desa = L.polygon(polygon_desa, style_polygon).bindTooltip("Wilayah Desa").addTo(
-                    wilayah_desa);
-                wilayah_desa.fitBounds(kantor_desa.getBounds());
             </script>
         </div>
     </div>
