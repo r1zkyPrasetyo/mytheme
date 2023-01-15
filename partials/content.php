@@ -226,14 +226,14 @@
                         <div class="statcircle bgwhite flexcenter">
                             <div>
                                 <img class="flip-vertical-right"
-                                    src="https://temabatuah.com/desa/themes/batuah_22_12/images/pngfile/populasi.png">
+                                    src="<?= base_url('assets/mytheme/images/icon/population.svg'); ?>">
                                 <p>Populasi</p>
                                 <h2 class="color-2" data-name="jmlpenduduk"></h2>
                             </div>
                         </div>
                     </div>
                     <div class="statleft">
-                        <a href="https://temabatuah.com/data-wilayah">
+                        <a href="<?= site_url(); ?>data-wilayah">
                             <div class="statleft1 statbox bgwhite flexleft bordergrey1 hover-height2">
                                 <p>Data <font class="desktop-only">Berdasarkan</font> Wilayah</p>
                                 <div class="staticon bgbiru bordergrey1 flexcenter">
@@ -246,7 +246,7 @@
                                 <div class="stat-arrow"></div>
                             </div>
                         </a>
-                        <a href="https://temabatuah.com/first/statistik/1">
+                        <a href="<?= site_url(); ?>first/statistik/1">
                             <div class="statleft2 statbox bgwhite flexleft bordergrey1 hover-height2">
                                 <p>Data <font class="desktop-only">Berdasarkan</font> Pekerjaan</p>
                                 <div class="staticon bgorange bordergrey1 flexcenter">
@@ -259,7 +259,7 @@
                                 <div class="stat-arrow"></div>
                             </div>
                         </a>
-                        <a href="https://temabatuah.com/first/statistik/14">
+                        <a href="<?= site_url(); ?>first/statistik/14">
                             <div class="statleft3 statbox bgwhite flexleft bordergrey1 hover-height2">
                                 <p>Data <font class="desktop-only">Statistik</font> Pendidikan <font
                                         class="desktop-only">Ditempuh</font>
@@ -276,7 +276,7 @@
                         </a>
                     </div>
                     <div class="statright">
-                        <a href="https://temabatuah.com/first/statistik/2">
+                        <a href="<?= site_url(); ?>first/statistik/2">
                             <div class="statright1 statbox bgwhite flexright bordergrey1 hover-height2">
                                 <div class="staticon bgpink bordergrey1 flexcenter">
                                     <svg viewBox="0 0 24 24">
@@ -289,7 +289,7 @@
                                 <div class="stat-arrow"></div>
                             </div>
                         </a>
-                        <a href="https://temabatuah.com/first/statistik/3">
+                        <a href="<?= site_url(); ?>first/statistik/3">
                             <div class="statright2 statbox bgwhite flexright bordergrey1 hover-height2">
                                 <div class="staticon bgyellow bordergrey1 flexcenter">
                                     <svg viewBox="0 0 24 24">
@@ -302,7 +302,7 @@
                                 <div class="stat-arrow"></div>
                             </div>
                         </a>
-                        <a href="https://temabatuah.com/first/dpt">
+                        <a href="<?= site_url(); ?>first/dpt">
                             <div class="statright3 statbox bgwhite flexright bordergrey1">
                                 <div class="staticon bgungu bordergrey1 flexcenter">
                                     <svg viewBox="0 0 24 24">
@@ -327,12 +327,12 @@
                                 <h3>LAKI-LAKI</h3>
                             </div>
                             <img style="margin:0 5px;"
-                                src="https://temabatuah.com/desa/themes/batuah_22_12/images/svgfile/man.svg">
+                                src="<?= base_url('assets/mytheme/images/icon/man.svg'); ?>">
                         </div>
 
                         <div class="population-item flexleft" style="text-align:left;width:50%;float:right;">
                             <img style="margin:0 5px;"
-                                src="https://temabatuah.com/desa/themes/batuah_22_12/images/svgfile/woman.svg">
+                                src="<?= base_url('assets/mytheme/images/icon/woman.svg'); ?>">
                             <div>
                                 <h2 data-name="perempuan"></h2>
                                 <h3>PEREMPUAN</h3>
