@@ -1,6 +1,6 @@
 <!-- FOOTER -->
-<?php if($transparansi) $this->load->view($folder_themes .'/partials/apbdesa-tema', $transparansi) ?>
-<footer class="footer hor-footer">
+<?php $this->load->view($folder_themes .'/partials/footer-2') ?>
+<footer class="footer hor-footer" >
     <div class="container">
         <div class="row align-items-center flex-row-reverse">
             <div class="col-md-12 col-sm-12 text-center">
