@@ -26,9 +26,9 @@
                             </tr>
                             <tr>
                                 <td style="font-size:90%;letter-spacing:-0.3px;">Rp
-                                    <?= number_format($subdata['realisasi']); ?></td>
+                                <?= number_format($subdata['anggaran']); ?></td>
                                 <td style="font-size:90%;letter-spacing:-0.3px;">Rp
-                                    <?= number_format($subdata['anggaran']); ?></td>
+                                    <?= number_format($subdata['realisasi']); ?></td>
                             </tr>
                         </tbody>
                     </table>
