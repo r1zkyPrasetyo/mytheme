@@ -1,69 +1,27 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed'); ?>
 
 <style type="text/css">
-    .info-box {
-        border: 1px solid;
-        border-radius: 10px;
-        background-color: #fff;
-        border-color: #d8dbe0;
-    }
-
-    .info-box-icon {
-        border-radius: 10px;
-        width: 120px;
-        height: 120px;
-    }
-
-    .info-box-content {
-        padding: 5px 10px;
-        margin-left: 130px;
-        height: 120px;
-    }
-
-    .info-box-icon {
-        padding-top: 0;
-        background: white;
-    }
-
-    .info-box-text {
-        text-transform: capitalize;
-    }
-    
-    .sdgs-logo {
-        border-radius: 10px;
-        width: 120px;
-        height: 120px;
-    }
-
-    .total-bumds {
-        font-size: 32px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: left;
-        color: #232b39;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .desc-bumds {
-        margin-top: 8px;
-        font-size: 21px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        text-align: left;
-        color: #5a677d;
-    }
+    .desc-bumds,.total-bumds{font-stretch:normal;font-style:normal;line-height:normal;letter-spacing:normal;text-align:left}.info-box{border:1px solid #d8dbe0;border-radius:10px;background-color:#fff}.info-box-icon,.sdgs-logo{border-radius:10px;width:120px;height:120px}.info-box-content{padding:5px 10px;margin-left:130px;height:120px}.info-box-icon{padding-top:0;background:#fff}.info-box-text{text-transform:capitalize}.total-bumds{font-size:32px;font-weight:700;color:#232b39;padding-top:10px;padding-bottom:10px}.desc-bumds{margin-top:8px;font-size:21px;font-weight:400;color:#5a677d}
 </style>
-<div class="single_page_area">
-    <h2 class="post_titile">SDGs <?= ucwords($this->setting->sebutan_desa) ?></h2>
-    <div class="box-body">
-        <?php $evaluasi = sdgs() ?>
+
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <div>
+        <h1 class="page-title">SDGs <?= ucwords($this->setting->sebutan_desa) ?></h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page"><a href="<?= site_url(); ?>">Beranda</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">SDGs <?= ucwords($this->setting->sebutan_desa) ?>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="card accordion-wizard">
+    <div class="card-header">
+        <h3 class="card-title">SDGs <?= ucwords($this->setting->sebutan_desa) ?></h3>
+    </div>
+    <div class="card-body">
+    <?php $evaluasi = sdgs() ?>
         <?php if ($error_msg = $evaluasi->error_msg): ?>
             <div class="alert alert-danger">
                 <b><?= $error_msg ?></b>
