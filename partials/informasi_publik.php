@@ -1,8 +1,23 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed'); ?>
 
-<div class="single_page_area">
-	<h2><?= $heading ?></h2>
-	<div class="table-responsive">
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <div>
+        <h1 class="page-title"><h2><?= $heading ?></h2></h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page"><a href="<?= site_url(); ?>">Beranda</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"><h2><?= $heading ?></h2>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="card accordion-wizard">
+    <div class="card-header">
+        <h3 class="card-title"></h3>
+    </div>
+    <div class="card-body">
+		<div class="table-responsive">
 		<table class="table table-striped table-bordered" id="info_publik">
 			<thead>
 				<tr>
@@ -14,6 +29,7 @@
 				</tr>
 			</thead>
 		</table>
+	</div>
 	</div>
 </div>
 <script type="text/javascript">

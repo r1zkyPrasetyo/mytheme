@@ -1,11 +1,23 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed'); ?>
 
-<div class="single_page_area">
-    <h2 class="post_titile"><?= $title ?></h2>
-    <?= $detail['keterangan']?>
-    <h3 class="post_titile">Daftar Pengurus</h3>
-    <div class="box-body">
-        <div class="table-responsive">
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <div>
+        <h1 class="page-title"><?= $title ?></h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page"><a href="<?= site_url(); ?>">Beranda</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"><?= $detail['keterangan']?>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="card accordion-wizard">
+    <div class="card-header">
+        <h3 class="card-title"><?= $title ?></h3>
+    </div>
+    <div class="card-body">
+    <div class="table-responsive">
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
