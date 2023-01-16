@@ -66,7 +66,33 @@
 		?>
 		<?php if ($single_artikel['boleh_komentar'] == 1) : ?>
 		<div class="fb-comments" data-href="<?= site_url('artikel/' . buat_slug($single_artikel)) ?>" width="100%" data-numposts="5"></div>
-	    <?php endif ?>
+	<?php endif ?>
+	<div class="contact_bottom">
+		<?php if (!empty($komentar)) : ?>
+			<div class="contact_bottom">
+				<div class="box-body">
+					<?php foreach ($komentar as $data) : ?>
+						<table class="table table-bordered table-striped dataTable table-hover">
+							<thead class="bg-gray disabled color-palette">
+								<tr>
+									<th><i class="fa fa-comment"></i> <?= $data['owner'] ?></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<font color='green'><small><?= tgl_indo2($data['tgl_upload']) ?></small></font><br /><?= $data['komentar'] ?>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					<?php endforeach ?>
+				</div>
+			</div>
+		<?php endif ?>
+	</div>
+	
+	<?php $this->load->view("$folder_themes/partials/komentar") ?>
 	</div>
 </div><!-- APP CONTENT CLOSED -->
 

@@ -18,25 +18,25 @@
             <tr class="komentar nama">
               <td width="20%">Nama</td>
               <td>
-                <input class="form-group required" type="text" name="owner" maxlength="50" placeholder="ketik di sini" value="<?= $notif['data']['owner'] ?>">
+                <input class="form-control required" type="text" name="owner" maxlength="50" placeholder="ketik di sini" value="<?= $notif['data']['owner'] ?>">
               </td>
             </tr>
             <tr class="komentar alamat">
               <td>No. Hp</td>
               <td>
-                <input class="form-group number required" type="text" name="no_hp" maxlength="15" placeholder="ketik di sini" value="<?= $notif['data']['no_hp'] ?>">
+                <input class="form-control number required" type="text" name="no_hp" maxlength="15" placeholder="ketik di sini" value="<?= $notif['data']['no_hp'] ?>">
               </td>
             </tr>
             <tr class="komentar alamat">
               <td>E-mail</td>
               <td>
-                <input class="form-group email" type="text" name="email" maxlength="50" placeholder="email@gmail.com" value="<?= $notif['data']['email'] ?>">
+                <input class="form-control email" type="text" name="email" maxlength="50" placeholder="email@gmail.com" value="<?= $notif['data']['email'] ?>">
               </td>
             </tr>
             <tr class="komentar pesan">
               <td valign="top">Isi Pesan</td>
               <td>
-                <textarea class="required" name="komentar"><?= $notif['data']['komentar'] ?></textarea>
+                <textarea class="form-control required" name="komentar"><?= $notif['data']['komentar'] ?></textarea>
               </td>
             </tr>
             <tr class="captcha">
@@ -46,7 +46,7 @@
                   <img id="captcha" src="<?= base_url('securimage/securimage_show.php') ?>" alt="CAPTCHA Image" />
                 </a>
                 &nbsp;
-                <input type="text" name="captcha_code" class="required" maxlength="6" placeholder="Isikan jawaban"/>
+                <input type="text" name="captcha_code" class="form-control required" maxlength="6" placeholder="Isikan jawaban"/>
               </td>
             </tr>
             <tr class="submit">
