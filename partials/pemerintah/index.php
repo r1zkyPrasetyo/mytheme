@@ -51,17 +51,7 @@
           <div class="tab-content">
             <div class="tab-pane active show" id="tab-51">
               <h4>Profil</h4>
-              <div>Peraturan Bupati No.117 tahun 2016 mengatur Kedudukan, Susunan, Tugas dan Fungsi, Serta Tata Kerja
-                Dinas Kependudukan dan Pencatatan Sipil sebagai berikut :</div>
-              <div><span style="color: inherit; font-family: inherit; font-size: 1.125rem;"><br></span></div>
-              <div><span style="color: inherit; font-family: inherit; font-size: 1.125rem;">Kedudukan</span><br></div>
-              <div>Dinas Kependudukan dan Pencatatan Sipil merupakan unsur pelaksana Pemerintah Daerah di bidang
-                Kependudukan dan Pencatatan Sipil yang dipimpin oleh Kepala Dinas dan berkedudukan di bawah dan
-                bertanggungjawab kepada Bupati melalui Sekretaris Daerah.</div>
-              <div><span style="color: inherit; font-family: inherit; font-size: 1.125rem;"><br></span></div>
-              <div><span style="color: inherit; font-family: inherit; font-size: 1.125rem;">Tugas Pokok</span><br></div>
-              <div>Dinas Kependudukan dan Pencatatan Sipil mempunyai tugas melaksanakan urusan rumah tangga Pemerintah
-                Daerah dan tugas pembantuan di bidang Kependudukan dan Pencatatan Sipil.</div>
+              <div>Drunten Kulon adalah desa di kecamatan Gabuswetan, Indramayu, Jawa Barat, Indonesia. [Batas timur: desa Drunten wetan, batas utara: desa Drunten wetan, batas barat: desa Sidamulya – Kec. Bongas, dan batas selatan: desa Kedungdawa. Drunten Kulon terdiri dari empat dusun, yakni: Kali Kulon, Tegalpelem, Sambilampuh dan Ipik/Sumber Jaya. Sektor ekonomi utama adalah pertanian dengan tanaman padi. Sarana Pendidikan yang ada, yaitu satu TK, tiga SD, satu MTS, satu MA, dan satu SMK.</div>
               <h4><br></h4>
             </div>
 
