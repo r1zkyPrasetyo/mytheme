@@ -34,11 +34,11 @@
           <div class="tab-menu-heading">
             <div class="tabs-menu1">
               <ul class="nav align-items-center">
-                <li class=""><a href="#tab-51" class="show" data-toggle="tab">Tentang Kami</a></li>
-                <li><a href="#tab-61" data-toggle="tab" class="">Pamong Desa</a></li>
-                <li><a href="#tab-71" data-toggle="tab" class="">Galeri Foto</a></li>
-                <li><a href="#tab-81" data-toggle="tab" class="">Link Terkait</a></li>
-                <li><a href="#tab-map" data-toggle="tab" class="">Peta</a></li>
+                <li class=""><a href="#tab-51" class="show" data-toggle="tab" style="color: black;">Tentang Kami</a></li>
+                <li><a href="#tab-61" data-toggle="tab" class=""  style="color: black;">Pamong Desa</a></li>
+                <li><a href="#tab-71" data-toggle="tab" class=""  style="color: black;">Galeri Foto</a></li>
+                <li><a href="#tab-81" data-toggle="tab" class=""  style="color: black;">Link Terkait</a></li>
+                <li><a href="#tab-map" data-toggle="tab" class=""  style="color: black;">Peta</a></li>
               </ul>
             </div>
           </div>

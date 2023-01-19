@@ -6,7 +6,7 @@
         margin-top: 35px;
     }
 </style>
-
+<div class="card box-primary-shadow">
 <div class="col-default">
     <div class="rowsame margin-minlr-5">
         <div class="mapleft bgwhite bordergrey1">
@@ -221,4 +221,5 @@
             </script>
         </div>
     </div>
+</div>
 </div>

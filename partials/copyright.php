@@ -1,5 +1,4 @@
 <!-- FOOTER -->
-<?php $this->load->view($folder_themes .'/partials/footer-2') ?>
 <footer class="footer hor-footer" >
     <div class="container">
         <div class="row align-items-center flex-row-reverse">
