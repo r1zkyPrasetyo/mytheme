@@ -327,6 +327,22 @@
         <?php endif ?>
         <div class="card CardPengaduan">
             <div class="card-header bg-success text-white">
+                <h3 class="card-title">SDGS DESA</h3>
+                <div class="card-options">
+                    <a href="#" class="card-options-collapse text-white" data-toggle="card-collapse"><i
+                            class="fe fe-chevron-up"></i></a>
+                    <a href="#" class="card-options-fullscreen text-white" data-toggle="card-fullscreen"><i
+                            class="fe fe-maximize"></i></a>
+                </div>
+            </div>
+            <?php if (config_item('jenis_opensid_langganan') == 'premium') :?>
+                <?php $this->load->view($folder_themes .'/partials/sdgs/index') ?>
+            <?php else : ?>
+                <?php $this->load->view($folder_themes .'/partials/sdgs/index-front') ?>
+            <?php endif ?>
+        </div>
+        <div class="card CardPengaduan">
+            <div class="card-header bg-success text-white">
                 <h3 class="card-title">STATISTIK DESA</h3>
                 <div class="card-options">
                     <a href="#" class="card-options-collapse text-white" data-toggle="card-collapse"><i
@@ -335,74 +351,7 @@
                             class="fe fe-maximize"></i></a>
                 </div>
             </div>
-            <!-- <div class="card-body">
-            <div class="row-cards" id="statistik">
-                <div class="row mx-2">
-                    <div class="col-md-3 col-6 d-flex" data-toggle="tooltip" data-placement="top" title=""
-                        data-original-title="Jumlah Laki-laki">
-                        <div class="card p-2 bg-info img-card box-info-shadow">
-                            <div class="p-2  card-body">
-                                <div class="d-flex">
-                                    <div class="text-white">
-                                        <h3 class="mb-0 number-font" data-name="laki-laki"></h3>
-                                        <p class="text-white mb-0">Laki-Laki</p>
-                                    </div>
-                                    <div class="ml-auto d-lg-block d-none"> <i
-                                            class="fa fa-male text-white fs-30 mr-2 mt-2"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 d-flex" data-toggle="tooltip" data-placement="top" title=""
-                        data-original-title="Jumlah Perempuan">
-                        <div class="card p-2 bg-secondary img-card box-secondary-shadow">
-                            <div class="p-2  card-body">
-                                <div class="d-flex">
-                                    <div class="text-white">
-                                        <h3 class="mb-0 number-font" data-name="perempuan"></h3>
-                                        <p class="text-white mb-0">Perempuan</p>
-                                    </div>
-                                    <div class="ml-auto d-lg-block d-none"> <i
-                                            class="fa fa-female text-white fs-30 mr-2 mt-2"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 d-flex" data-toggle="tooltip" data-placement="top" title=""
-                        data-original-title="Jumlah Penduduk">
-                        <div class="card p-2 bg-primary img-card box-primary-shadow">
-                            <div class="p-2  card-body">
-                                <div class="d-flex">
-                                    <div class="text-white">
-                                        <h3 class="mb-0 number-font" data-name="jmlpenduduk"></h3>
-                                        <p class="text-white mb-0">Jumlah Penduduk</p>
-                                    </div>
-                                    <div class="ml-auto d-lg-block d-none"> <i
-                                            class="fa fa-users text-white fs-30 mr-2 mt-2"></i> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6 d-flex" data-toggle="tooltip" data-placement="top" title=""
-                        data-original-title="Jumlah Kertu Keluarga">
-                        <div class="card p-2  bg-success img-card box-success-shadow">
-                            <div class="card-body p-2">
-                                <div class="d-flex">
-                                    <div class="text-white">
-                                        <h3 class="mb-0 number-font" data-name="kk">329,212</h3>
-                                        <p class="text-white mb-0">Kartu Keluarga</p>
-                                    </div>
-                                    <div class="ml-auto d-lg-block d-none"> <i
-                                            class="fa fa-user text-white fs-30 mr-2 mt-2"></i> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+          
             <div class="col-default">
                 <div class="statistik-row bggrad-grey1 bordergrey1">
                     <div class="stathead flexcenter">
