@@ -299,3 +299,63 @@
       });
     });
 </script>
+<script type="text/javascript">
+	scoreSdgs();
+	 function scoreSdgs() {
+        $.ajax({
+            url: 'https://sid.kemendesa.go.id/sdgs/searching/score-sdgs',
+            type: 'GET',
+            dataType: 'JSON',
+            data: {
+                location_code: "<?= config_item('kode_desa') ?>"
+            },
+            beforeSend: function() {
+                $('#tss-score-avg').html('');
+                $('#tss-content').html('');
+            },
+            success: function(response) {
+                
+                $('#total_desa').val(response.total_desa);
+
+                if($('#village-id').val()){
+                    $('#info-area').text('');
+                }else{
+                    $('#info-area').html('<i>Diambil dari rata-rata Skor 18 Goals SDGs Desa dari '+response.total_desa+' desa<br> per hari/tanggal '+$('#txt_last_update').text()+' </i>');
+                }
+
+                if(response.average >= 81 && response.average <= 100) {
+                    var score_color = 'text-success';
+                } else if(response.average >= 51 && response.average <= 80) {
+                    var score_color = 'text-warning';
+                } else {
+                    var score_color = 'text-danger';
+                }
+
+                $('#tss-score-avg').html('<span class="' + score_color + '">' + formatNumber(response.average, 2) + '</span>');
+                $.each(response.data, function(i, val) {
+                    if(val.score >= 81 && val.score <= 100) {
+                        var score_color = 'text-success';
+                    } else if(val.score >= 51 && val.score <= 80) {
+                        var score_color = 'text-warning';
+                    } else {
+                        var score_color = 'text-danger';
+                    }
+
+                    $('#tss-content').append(`
+                        <div class="col-md-2 col-sm-6">
+                            <a href="javascript:void(0);" class="text-center" onclick="detailScoreSdgs('` + val.goals + `', '` +val.image+ `', '` +val.title+ `')">
+                                <div class="text-center">
+                                    <img src="` + val.image + `" class="img img-fluid" style="max-height:120px;">
+                                    <h3 class="mb-0 mt-2 ` + score_color + `">` + formatNumber(val.score, 2) + `</h3>
+                                </div>
+                            </a>
+                        </div>
+                    `);
+                });
+
+            }, error: function() {
+                loadingClose('.content-searching');
+            }
+        });
+    }
+</script>
