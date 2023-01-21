@@ -9,7 +9,7 @@
         <?php else: ?>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="info-box" style="display: flex;justify-content: center;">
+                <div class="info-box" style="display: flex;justify-content: center; padding: 20px;">
                     <span class="info-box-number total-bumds" style="text-align: center;"><?= $evaluasi->average ?>
                         <span class="info-box-text desc-bumds" style="text-align: center;">Skor SDGs
                             <?= ucwords($this->setting->sebutan_desa) ?></span>
