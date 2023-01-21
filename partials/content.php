@@ -325,7 +325,7 @@
         </div>
         <?php else : ?>
         <?php endif ?>
-        <div class="card CardPengaduan collapsed">
+        <div class="card CardPengaduan card-collapsed">
             <div class="card-header bg-success text-white">
                 <h3 class="card-title">SDGS DESA</h3>
                 <div class="card-options">
