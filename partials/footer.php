@@ -319,7 +319,7 @@
 					if($('#village-id').val()){
 						$('#info-area').text('');
 					}else{
-						$('#info-area').html('<i>Diambil dari rata-rata Skor 18 Goals SDGs Desa dari '+response.total_desa+' desa<br> per hari/tanggal '+$('#txt_last_update').text()+' </i>');
+						$("[data-name=info-area]").html(`<i>Diambil dari rata-rata Skor 18 Goals SDGs Desa dari ${response.total_desa} desa</i>`)
 					}
 
 					if(response.average >= 81 && response.average <= 100) {
@@ -330,7 +330,7 @@
 						var score_color = 'text-danger';
 					}
 
-					$('#tss-score-avg').html('<span class="' + score_color + '">' + formatNumber(response.average, 2) + '</span>');
+					$("[data-name=tss-score-avg]").html(`<span class="${score_color}">${response.average}</span>`)
 					$.each(response.data, function(i, val) {
 						if(val.score >= 81 && val.score <= 100) {
 							var score_color = 'text-success';
@@ -342,10 +342,10 @@
 
 						$('#tss-content').append(`
 							<div class="col-md-2 col-sm-6">
-								<a href="javascript:void(0);" class="text-center" onclick="detailScoreSdgs('` + val.goals + `', '` +val.image+ `', '` +val.title+ `')">
+								<a href="javascript:void(0);" class="text-center" onclick="detailScoreSdgs('${val.goals}')">
 									<div class="text-center">
-										<img src="` + val.image + `" class="img img-fluid" style="max-height:120px;">
-										<h3 class="mb-0 mt-2 ` + score_color + `">` + formatNumber(val.score, 2) + `</h3>
+										<img src="${val.image}" class="img img-fluid" style="max-height:120px;">
+										<h3 class="mb-0 mt-2 ${score_color}">${val.score}</h3>
 									</div>
 								</a>
 							</div>
@@ -357,7 +357,39 @@
 				}
 			});
 		} catch (a) {
-				console.log(a)
+			console.log(a)
 		}
+		
+
 	});
+</script>
+<script type="text/javascript">
+	var kode_desa = "<?= config_item('kode_desa') ?>";
+	function detailScoreSdgs(goals) {
+        $('#modal-score-sdgs').modal('hide');
+			$.ajax({
+				url: "<?= config_item('url_detail_sdgs') ?>"+ kode_desa + "/" + goals,
+				type: 'GET',
+                    dataType: 'JSON',
+                    beforeSend: function () {
+                        $('#modal-score-sdgs').modal('show');
+                        $('.tss-detail-heading-score-sdgs').html('');
+                        $('.tss-detail-data-score-sdgs').html('');
+                    },
+                    success: function (response) {
+                        $('.tss-detail-heading-score-sdgs').html('Goals ' + goals);
+                        $.each(response, function (i, val) {
+                            $('.tss-detail-data-score-sdgs').append(` <tr><td class="nowrap">` + val
+                                .no + `</td><td class="nowrap">` + val.name +
+                                `</td><td class="nowrap" align="center">` + val.score +
+                                `</td><td class="nowrap" align="right">` + val.volume +
+                                `</td><td class="nowrap">` + val.unit +
+                                `</td><td class="nowrap">` + val.recommendation + `</td></tr> `);
+                        });
+                    },
+                    error: function () {
+                        loadingClose('#modal-score-sdgs .modal-content');
+                    }
+			});
+		}
 </script>
