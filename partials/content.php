@@ -336,7 +336,7 @@
                 </div>
             </div>
             <?php if (config_item('jenis_opensid_langganan') == 'premium') :?>
-                <?php $this->load->view($folder_themes .'/partials/sdgs/index') ?>
+                <?php $this->load->view($folder_themes .'/partials/sdgs/index_front_premium') ?>
             <?php else : ?>
                 <?php $this->load->view($folder_themes .'/partials/sdgs/index-front') ?>
             <?php endif ?>
