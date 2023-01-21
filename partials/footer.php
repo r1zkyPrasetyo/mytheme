@@ -301,14 +301,13 @@
 </script>
 <script type="text/javascript">
 	$(document).ready(function () {
+		var kode_desa = "<?= config_item('kode_desa') ?>";
 		try {
 			$.ajax({
-				url: "<?= config_item('url_sdgs') ?>",
+				url: "<?= config_item('url_sdgs') ?>"+ kode_desa,
 				type: 'GET',
 				dataType: 'JSON',
-				data: {
-					location_code: "<?= config_item('kode_desa') ?>"
-				},
+				crossDomain: !0,
 				beforeSend: function() {
 					$('#tss-score-avg').html('');
 					$('#tss-content').html('');
