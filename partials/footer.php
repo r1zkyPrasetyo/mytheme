@@ -303,7 +303,7 @@
 	scoreSdgs();
 	 function scoreSdgs() {
         $.ajax({
-            url: 'https://sid.kemendesa.go.id/sdgs/searching/score-sdgs',
+            url: '<?= config_item('url_sdgs') ?>',
             type: 'GET',
             dataType: 'JSON',
             data: {
