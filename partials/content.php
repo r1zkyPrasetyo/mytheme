@@ -340,6 +340,18 @@
             <?php else : ?>
                 <?php $this->load->view($folder_themes .'/partials/sdgs/index-front') ?>
             <?php endif ?>
+        </div> 
+        <div class="card CardPengaduan">
+            <div class="card-header bg-success text-white">
+                <h3 class="card-title">CEK DATA PEMILIH PEMILU</h3>
+                <div class="card-options">
+                    <a href="#" class="card-options-collapse text-white" data-toggle="card-collapse"><i
+                            class="fe fe-chevron-up"></i></a>
+                    <a href="#" class="card-options-fullscreen text-white" data-toggle="card-fullscreen"><i
+                            class="fe fe-maximize"></i></a>
+                </div>
+            </div>
+            <iframe class="iframe" src="https://dpt.desadruntenkulon.com/"></iframe>
         </div>
         <div class="card CardPengaduan">
             <div class="card-header bg-success text-white">
