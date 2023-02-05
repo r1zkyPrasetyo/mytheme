@@ -132,9 +132,7 @@
 		$('#jam').html("<B>"+days[day]+", "+daym+" "+months[month]+" "+year+"</B><br>"+hours+" : "+minutes+" : "+seconds);
 		setTimeout("renderDate()",1000)
 	}
-	document.addEventListener('contextmenu', function(e) {
-		e.preventDefault();
-	});
+	
 </script>
 <style type="text/css">
 	.iframe{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;width:100%;height:500px;min-height:100%;padding-top:4em;-moz-box-sizing:border-box;box-sizing:border-box}
