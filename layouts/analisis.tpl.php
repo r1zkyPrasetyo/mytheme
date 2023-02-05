@@ -31,11 +31,23 @@
 										<?php $this->load->view("$folder_themes/partials/analisis"); ?>
 									</div>
 								<?php else : ?>
-									<div class="">
-										<div class="single_page_area">
-											<h2 class="post_titile">DAFTAR AGREGASI DATA ANALISIS DESA</h2>
-										</div>
-										<?php if ($list_indikator): ?>
+                                    <!-- PAGE-HEADER -->
+                                    <div class="page-header">
+                                        <div>
+                                            <h1 class="page-title">DAFTAR AGREGASI DATA ANALISIS DESA</h1>
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item" aria-current="page"><a href="<?= site_url(); ?>">Beranda</a>
+                                                </li>
+                                                <li class="breadcrumb-item active" aria-current="page"></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <div class="card accordion-wizard">
+                                        <div class="card-header">
+                                            <h3 class="card-title">DAFTAR AGREGASI DATA ANALISIS DESA</h3>
+                                        </div>
+                                        <div class="card-body">
+                                        <?php if ($list_indikator): ?>
 											<?php if (count($master_indikator) > 1) : ?>
 												<form action="<?=site_url('data_analisis'); ?>" method="get">
 													<div class="row" style="margin-bottom: 20px;">
@@ -83,7 +95,8 @@
 										<?php else: ?>
 											<p>Data tidak tersedia</p>
 										<?php endif; ?>
-									</div>
+                                        </div>
+                                    </div>
 								<?php endif; ?>
             </div>
         </div>
