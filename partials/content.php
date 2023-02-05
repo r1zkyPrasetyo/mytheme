@@ -353,7 +353,7 @@
             </div>
             <div class="col-default">
                 <div class="statistik-row bggrad-grey1 bordergrey1">
-                    <iframe height="500px" class="iframe" src="https://dpt.desadruntenkulon.com/"></iframe>
+                    <iframe class="iframe" src="https://dpt.desadruntenkulon.com/"></iframe>
                 </div>
             </div>
         </div>
