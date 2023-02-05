@@ -357,7 +357,7 @@
                         <h1 class="bgcolor-1 flexcenter">Statistik Desa</h1>
                     </div>
                     <div class="statistik-inner">
-                        <iframe class="iframe" src="https://dpt.desadruntenkulon.com/"></iframe>
+                        <iframe  height="500" class="iframe" src="https://dpt.desadruntenkulon.com/"></iframe>
                     </div>
                 </div>
             </div>
