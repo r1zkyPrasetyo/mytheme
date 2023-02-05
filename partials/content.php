@@ -352,9 +352,7 @@
                 </div>
             </div>
             <div class="col-default">
-                <div class="statistik-row bggrad-grey1 bordergrey1">
-                    <iframe class="iframe" src="https://dpt.desadruntenkulon.com/"></iframe>
-                </div>
+            <iframe class="iframe" src="https://dpt.desadruntenkulon.com/"></iframe>
             </div>
         </div>
         <div class="card CardPengaduan">
