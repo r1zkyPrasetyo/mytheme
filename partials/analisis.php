@@ -69,31 +69,48 @@
 	}
 	h3{ margin-left: 10px; }
 </style>
-
-<h3><?= $indikator['pertanyaan'] ?></h3><br>
-<div class="middin-center" style="padding: 5px;">
-	<div id="contentpane">
-		<div class="ui-layout-center" id="chart" style="padding: 5px;"></div>
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th width="1%">No</th>
-					<th>Jawaban</th>
-					<th width="20%" nowrap>Jumlah Responden</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php foreach($list_jawab as $data): ?>
-					<tr>
-						<td class="text-center"><?= $data['no']?></td>
-						<td><?= $data['jawaban']?></td>
-						<td class="text-center"><?= $data['nilai']?></td>
-					</tr>
-				<?php endforeach; ?>
-			</tbody>
-		</table>
-		<div>
-			<a href="<?= site_url("data_analisis?master={$indikator['id_master']}"); ?>" class="btn btn-primary">Kembali</a>
+<!-- PAGE-HEADER -->
+<div class="page-header">
+	<div>
+		<h1 class="page-title">Daftar Calon Pemilih (pada tgl pemilihan <?= $tanggal_pemilihan ?>)</h1>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item" aria-current="page"><a href="<?= site_url(); ?>">Beranda</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">Daftar Calon Pemilih (pada tgl pemilihan <?= $tanggal_pemilihan ?>)</li>
+		</ol>
+	</div>
+</div>
+<div class="card accordion-wizard">
+	<div class="card-header">
+		<h3 class="card-title"><?= $indikator['pertanyaan'] ?></h3>
+	</div>
+	<div class="card-body">
+		<div class="middin-center" style="padding: 5px;">
+			<div id="contentpane">
+				<div class="ui-layout-center" id="chart" style="padding: 5px;"></div>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th width="1%">No</th>
+							<th>Jawaban</th>
+							<th width="20%" nowrap>Jumlah Responden</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach($list_jawab as $data): ?>
+							<tr>
+								<td class="text-center"><?= $data['no']?></td>
+								<td><?= $data['jawaban']?></td>
+								<td class="text-center"><?= $data['nilai']?></td>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
+				<div>
+					<a href="<?= site_url("data_analisis?master={$indikator['id_master']}"); ?>" class="btn btn-primary">Kembali</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
