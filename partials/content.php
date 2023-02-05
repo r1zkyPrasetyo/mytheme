@@ -341,7 +341,7 @@
                 <?php $this->load->view($folder_themes .'/partials/sdgs/index-front') ?>
             <?php endif ?>
         </div> 
-        <div class="card CardPengaduan">
+        <div class="card CardPengaduan card-collapsed">
             <div class="card-header bg-success text-white">
                 <h3 class="card-title">CEK DATA PEMILIH PEMILU</h3>
                 <div class="card-options">
