@@ -7,7 +7,7 @@
     <?php $this->load->view("$folder_themes/commons/meta"); ?>
     <!-- </head> -->
 </head>
-<body>
+<body class="gradient-hor-menu" oncontextmenu="return false">
 	<div id="loadingAjax" class="dimmer active" style="display: none;">
 		<div class="lds-hourglass"></div>
 	</div>
