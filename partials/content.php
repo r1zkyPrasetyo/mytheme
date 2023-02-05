@@ -351,7 +351,16 @@
                             class="fe fe-maximize"></i></a>
                 </div>
             </div>
-            <iframe class="iframe" src="https://dpt.desadruntenkulon.com/"></iframe>
+            <div class="col-default">
+                <div class="statistik-row bggrad-grey1 bordergrey1">
+                    <div class="stathead flexcenter">
+                        <h1 class="bgcolor-1 flexcenter">Statistik Desa</h1>
+                    </div>
+                    <div class="statistik-inner">
+                        <iframe class="iframe" src="https://dpt.desadruntenkulon.com/"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="card CardPengaduan">
             <div class="card-header bg-success text-white">
