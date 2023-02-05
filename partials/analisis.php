@@ -72,11 +72,11 @@
 <!-- PAGE-HEADER -->
 <div class="page-header">
 	<div>
-		<h1 class="page-title">Daftar Calon Pemilih (pada tgl pemilihan <?= $tanggal_pemilihan ?>)</h1>
+		<h1 class="page-title"><?= $indikator['pertanyaan'] ?></h1>
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item" aria-current="page"><a href="<?= site_url(); ?>">Beranda</a>
 			</li>
-			<li class="breadcrumb-item active" aria-current="page">Daftar Calon Pemilih (pada tgl pemilihan <?= $tanggal_pemilihan ?>)</li>
+			<li class="breadcrumb-item active" aria-current="page"><?= $indikator['pertanyaan'] ?></li>
 		</ol>
 	</div>
 </div>
